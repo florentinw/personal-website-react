@@ -6,4 +6,5 @@ body {
   /* Firefox */
   -webkit-font-smoothing: antialiased;
   /* WebKit  */
+  transition: background-color 0.2s ease-in-out;
 }

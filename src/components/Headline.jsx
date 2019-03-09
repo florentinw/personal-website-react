@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export default styled.h1`
-  color: ${props => props.theme.colors.black || "black"};
+  color: ${props => props.theme.headlineColor || "black"};
   font-size: 40px;
   font-weight: 700;
   line-height: 1.4;

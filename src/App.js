@@ -1,21 +1,22 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
+import { Helmet } from "react-helmet";
 
 import "./assets/css/main.css";
 
 //import Link from "./components/CustomLink";
 import Translation from "./function/translation";
 
-import Button from "./components/Button";
+// import Button from "./components/Button";
 
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ProjectPage from "./pages/ProjectPage";
 import LegalPage from "./pages/LegalPage";
-
-import socialData from "./data/social";
 import ErrorPage from "./pages/ErrorPage";
+
+//import socialData from "./data/social";
 
 window.t = Translation.getPhrase;
 
@@ -55,20 +56,26 @@ class App extends Component {
     const themes = {
       light: {
         bodyTextColor: colors.grayDark,
-        labelColor: colors.gray,
+        labelColor: colors.grayDark,
         headlineColor: colors.black,
         backgroundColor: colors.white,
         buttonTextColor: colors.white,
         buttonBackgroundColor: colors.black,
+        iconColor: colors.black,
+        linkColor: colors.black,
+        linkBorderColor: colors.grayLight,
         staticColors: colors
       },
       dark: {
-        bodyTextColor: colors.grayLight,
+        bodyTextColor: colors.gray,
         labelColor: colors.grayDark,
         headlineColor: colors.white,
         backgroundColor: colors.black,
         buttonTextColor: colors.black,
         buttonBackgroundColor: colors.white,
+        iconColor: colors.white,
+        linkColor: colors.white,
+        linkBorderColor: colors.grayDark,
         staticColors: colors
       }
     };
@@ -77,38 +84,28 @@ class App extends Component {
     document.body.style = "background-color: " + currentTheme.backgroundColor;
 
     return (
-      <ThemeProvider theme={currentTheme}>
-        <Router basename={window.basename}>
-          <div>
-            <header className="header">
-              <div className="header-nav" />
+      <div>
+        <Helmet defaultTitle="Florentin | Freelance Graphic Designer" titleTemplate="%s | Florentin" />
+        <ThemeProvider theme={currentTheme}>
+          <Router>
+            <Switch>
+              <Route exact path="/" component={HomePage} />
+              <Route exact path="/about" component={AboutPage} />
+              <Route path="/project/:slug" component={ProjectPage} />
+              <Route path="/legal" component={LegalPage} />
+              <Route component={ErrorPage} />
+            </Switch>
+            {/*socialData.map(s => (
+              <a key={s.name} href={s.name} title={s.name} target="_top">
+                <span className={s.name} />
+              </a>
+            ))
 
-              <div className="header-logo" />
-
-              <div className="header-social">
-                {socialData.map(s => (
-                  <a key={s.name} href={s.name} title={s.name} target="_top">
-                    <span className={s.name} />
-                  </a>
-                ))}
-              </div>
-            </header>
-            {!window.pillMode && <div className="header-border" />}
-            <main>
-              <Switch>
-                <Route exact path="/" component={HomePage} />
-                <Route exact path="/about" component={AboutPage} />
-                <Route path="/project/:slug" component={ProjectPage} />
-                <Route path="/legal" component={LegalPage} />
-                <Route component={ErrorPage} />
-              </Switch>
-            </main>
-            <footer style={{ textAlign: "center" }}>
-              <Button onClick={() => this.switchTheme()}>Switch Theme</Button>
-            </footer>
-          </div>
-        </Router>
-      </ThemeProvider>
+            
+            */}
+          </Router>
+        </ThemeProvider>
+      </div>
     );
   }
 }

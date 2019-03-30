@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export default styled.h1`
   color: ${props => props.theme.headlineColor || "black"};
-  font-size: 40px;
+  font-size: 42px;
   font-weight: 700;
   line-height: 1.4;
   letter-spacing: 0.01em;

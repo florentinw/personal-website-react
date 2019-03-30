@@ -1,34 +1,37 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
+import isExternal from "is-url-external";
 
-function guid() {
-  function s4() {
-    return Math.floor((1 + Math.random()) * 0x10000)
-      .toString(16)
-      .substring(1);
-  }
-  return s4() + s4() + "-" + s4() + "-" + s4() + "-" + s4() + "-" + s4() + s4() + s4();
-}
+const InternalLink = styled(Link)`
+  color: ${props => props.theme.linkColor || "black"};
+  font-weight: 500;
+  text-decoration: none;
+  line-height: 1;
+  display: inline;
+  padding: ${props => (props.noBorder ? `0px` : `0 2px 0.15em 2px`)};
+  border-bottom: ${props => (props.noBorder ? `none` : `0.15em solid ${props.theme.linkBorderColor || "gray"}`)};
+`;
 
-/**
- * Scrollt to top when clicked on Link
- */
+const ExternalLink = styled.a`
+  color: ${props => props.theme.linkColor || "black"};
+  font-weight: 500;
+  text-decoration: none;
+  line-height: 1;
+  display: inline;
+  padding: ${props => (props.noBorder ? `0px` : `0 2px 0.15em 2px`)};
+  border-bottom: ${props => (props.noBorder ? `none` : `0.15em solid ${props.theme.linkBorderColor || "gray"}`)};
+`;
+
 class CustomLink extends React.Component {
-  componentWillMount() {
-    this.id = "CustomLink-" + guid();
-  }
-
-  componentDidMount() {
-    document.getElementById(this.id).addEventListener("click", () => {
-      window.scrollTo(0, 0);
-    });
-  }
-
   render() {
-    return (
-      <Link {...this.props} id={this.id}>
+    return isExternal(this.props.to) ? (
+      // eslint-disable-next-line
+      <ExternalLink target="_blank" href={this.props.to} {...this.props} />
+    ) : (
+      <InternalLink {...this.props} onClick={window.scrollTo(0, 0)}>
         {this.props.children}
-      </Link>
+      </InternalLink>
     );
   }
 }

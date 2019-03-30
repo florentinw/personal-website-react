@@ -7,19 +7,19 @@ const FlexContainer = styled(Container)`
   display: flex;
   padding-top: 40px;
   position: absolute;
-  width: 100%;
   top: 0;
   right: 0;
   left: 0;
+  align-items: center;
 
   > * {
     flex: 1;
   }
 
-  *:first-child {
+  > *:first-child {
     text-align: left;
   }
-  *:last-child {
+  > *:last-child {
     text-align: right;
   }
 `;
@@ -28,8 +28,8 @@ class Navbar extends Component {
   render() {
     return (
       <FlexContainer>
-        {this.props.leftContent}
-        {this.props.rightContent}
+        <div>{this.props.leftContent}</div>
+        <div>{this.props.rightContent}</div>
       </FlexContainer>
     );
   }

@@ -7,7 +7,7 @@ import Headline from "./Headline";
 class Header extends Component {
   render() {
     return (
-      <Container style={{ margin: "170px auto 100px auto" }}>
+      <Container style={{ margin: "160px auto 120px auto" }}>
         <Headline>{this.props.content}</Headline>
       </Container>
     );

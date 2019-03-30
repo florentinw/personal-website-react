@@ -8,3 +8,11 @@ body {
   /* WebKit  */
   transition: background-color 0.2s ease-in-out;
 }
+
+.switch-wrapper {
+  position: relative;
+}
+
+.switch-wrapper>div {
+  position: absolute;
+}

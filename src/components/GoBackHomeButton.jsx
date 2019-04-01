@@ -4,7 +4,7 @@ import styled from "styled-components";
 import CustomLink from "../components/CustomLink";
 import ChevronBackIcon from "../components/icons/ChevronBackIcon";
 
-const Wrapper = styled.div`
+const Wrapper = styled(CustomLink)`
   display: flex;
   align-items: center;
 `;
@@ -12,11 +12,9 @@ const Wrapper = styled.div`
 class GoBackButton extends Component {
   render() {
     return (
-      <Wrapper>
+      <Wrapper to="/" noBorder>
         <ChevronBackIcon />
-        <CustomLink to="/" noBorder>
-          {this.props.children}
-        </CustomLink>
+        {this.props.children}
       </Wrapper>
     );
   }

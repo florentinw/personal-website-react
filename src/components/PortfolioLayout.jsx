@@ -4,39 +4,58 @@ import styled from "styled-components";
 import Container from "./Container";
 import PortfolioItem from "./PortfolioItem";
 
-const Wrapper = styled(Container)`
+import portfolioData from "../data/portfolio.json";
+
+const MainWrapper = styled(Container)`
   display: flex;
   flex-wrap: wrap;
+  width: 85%;
+`;
+
+const Wrapper = styled.div`
+  display: block;
+  flex: 1;
+  margin-top: -24px;
+  @media (max-width: 960px) {
+    flex: 1 1 320px !important;
+  }
 `;
 
 class PortfolioLayout extends Component {
-  render() {
+  render = () => {
     return (
-      <Wrapper>
-        <PortfolioItem
-          client="How To Music"
-          headline="Designing physical campains for a digital product"
-          skills="print design"
-          backgroundImage="https://images.pexels.com/photos/1769408/pexels-photo-1769408.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-          page="/dab"
-        />
-        <PortfolioItem
-          client="ShortTech"
-          headline="Rethinking how Gen Z interacts with tech news"
-          skills="web design & branding"
-          backgroundImage="https://images.pexels.com/photos/1769408/pexels-photo-1769408.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-          page="/dab"
-        />
-        <PortfolioItem
-          client="Optik Blümel"
-          headline="Moving traditional companies into the digital age"
-          skills="Web design & development"
-          backgroundImage="https://images.pexels.com/photos/1769408/pexels-photo-1769408.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-          page="/dab"
-        />
-      </Wrapper>
+      <MainWrapper>
+        <Wrapper style={{ flex: 7 }}>
+          {Object.keys(portfolioData).map((slug, index, array) => {
+            if (!(index & 1))
+              return (
+                <PortfolioItem
+                  client={portfolioData[slug].client}
+                  headline={portfolioData[slug].headline}
+                  skills={portfolioData[slug].skills}
+                  backgroundImage={portfolioData[slug].backgroundImage}
+                  slug={slug}
+                />
+              );
+          })}
+        </Wrapper>
+        <Wrapper style={{ flex: 5 }}>
+          {Object.keys(portfolioData).map((slug, index, array) => {
+            if (index & 1)
+              return (
+                <PortfolioItem
+                  client={portfolioData[slug].client}
+                  headline={portfolioData[slug].headline}
+                  skills={portfolioData[slug].skills}
+                  backgroundImage={portfolioData[slug].backgroundImage}
+                  slug={slug}
+                />
+              );
+          })}
+        </Wrapper>
+      </MainWrapper>
     );
-  }
+  };
 }
 
 export default PortfolioLayout;

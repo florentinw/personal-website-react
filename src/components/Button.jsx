@@ -5,6 +5,7 @@ export default styled.button`
   border: none;
   color: ${props => props.theme.background || "black"};
   padding: 12px 18px;
+  border-radius: 6px;
   text-align: center;
   text-decoration: none;
   display: inline-block;

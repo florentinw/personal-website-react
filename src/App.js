@@ -8,44 +8,42 @@ import "./assets/css/main.css";
 //import Link from "./components/CustomLink";
 import Translation from "./function/translation";
 
-// import Button from "./components/Button";
-
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ProjectPage from "./pages/ProjectPage";
 import LegalPage from "./pages/LegalPage";
 import ErrorPage from "./pages/ErrorPage";
 
+import Footer from "./components/Footer";
+
 //import socialData from "./data/social";
 
 window.t = Translation.getPhrase;
 
 class App extends Component {
-  componentWillMount() {
+  componentWillMount = () => {
     if (window.prefersDarkmode) {
-      // force darkmode
-      this.switchTheme("dark");
+      this.setState({ theme: "dark" });
+    } else if (localStorage.getItem("theme") === "dark") {
+      this.setState({ theme: "dark" });
+    } else if (localStorage.getItem("theme") === "light") {
+      this.setState({ theme: "light" });
     } else {
-      // set theme to previous state
-      this.setState({ darkmode: localStorage.getItem("darkmode") ? true : false });
+      this.setState({ theme: "light" });
     }
-  }
+  };
 
-  switchTheme(nextTheme) {
-    if (nextTheme === "dark" || !localStorage.getItem("darkmode")) {
-      localStorage.setItem("darkmode", "activeted");
-      this.setState({ darkmode: true });
-    } else {
-      localStorage.removeItem("darkmode");
-      this.setState({ darkmode: false });
-    }
-  }
+  handleSwitchThemeButton = () => {
+    const wantedTheme = this.state.theme === "dark" ? "light" : "dark";
+    this.setState({ theme: wantedTheme });
+    localStorage.setItem("theme", wantedTheme);
+  };
 
-  componentDidMount() {
+  componentDidMount = () => {
     window.globalRef = this;
-  }
+  };
 
-  render() {
+  render = () => {
     const themes = {
       light: {
         background: "#FFFFFF",
@@ -65,32 +63,35 @@ class App extends Component {
       }
     };
 
-    let currentTheme = this.state.darkmode ? themes.dark : themes.light;
+    let currentTheme = themes[this.state.theme];
     document.body.style = "background-color: " + currentTheme.background;
 
     return (
       <div>
         <Helmet defaultTitle="Florentin | Freelance Graphic Designer" titleTemplate="%s | Florentin" />
         <ThemeProvider theme={currentTheme}>
-          <Router>
-            <Switch>
-              <Route exact path="/" component={HomePage} />
-              <Route exact path="/about" component={AboutPage} />
-              <Route path="/project/:slug" component={ProjectPage} />
-              <Route path="/legal" component={LegalPage} />
-              <Route component={ErrorPage} />
-            </Switch>
-            {/*socialData.map(s => (
+          <div>
+            <Router>
+              <Switch>
+                <Route exact path="/" component={HomePage} />
+                <Route exact path="/about" component={AboutPage} />
+                <Route path="/project/:slug" component={ProjectPage} />
+                <Route path="/legal" component={LegalPage} />
+                <Route component={ErrorPage} />
+              </Switch>
+              {/*socialData.map(s => (
               <a key={s.name} href={s.name} title={s.name} target="_top">
                 <span className={s.name} />
               </a>
             ))
             */}
-          </Router>
+            </Router>
+            <Footer changeThemeFunction={this.handleSwitchThemeButton} />
+          </div>
         </ThemeProvider>
       </div>
     );
-  }
+  };
 }
 
 export default App;

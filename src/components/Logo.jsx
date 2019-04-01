@@ -1,10 +1,15 @@
 import React, { Component } from "react";
+import styled from "styled-components";
 
 import { ReactComponent as LogoSVG } from "../assets/svg/logo.svg";
 
+const LogoSVGFill = styled(LogoSVG)`
+  fill: ${props => props.theme.higherContrast || "black"};
+`;
+
 class Logo extends Component {
   render() {
-    return <LogoSVG style={{ height: 36, filter: "invert(1)" }} />;
+    return <LogoSVGFill style={{ height: 36 }} />;
   }
 }
 

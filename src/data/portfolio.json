@@ -1,0 +1,26 @@
+{
+  "howtomusic": {
+    "client": "How To Music",
+    "headline": "Designing physical campains for a digital product",
+    "skills": "print design",
+    "backgroundImage": "https://images.pexels.com/photos/1769408/pexels-photo-1769408.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+  },
+  "shorttech": {
+    "client": "ShortTech",
+    "headline": "Rethinking how Gen Z interacts with tech news",
+    "skills": "web design & branding",
+    "backgroundImage": "https://images.pexels.com/photos/1769408/pexels-photo-1769408.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+  },
+  "optikbluemel": {
+    "client": "Optik Blümel",
+    "headline": "Moving traditional companies into the digital age",
+    "skills": "Web design & development",
+    "backgroundImage": "https://images.pexels.com/photos/1769408/pexels-photo-1769408.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+  },
+  "other": {
+    "client": "Other Project",
+    "headline": "Other Headline",
+    "skills": "Web design & development",
+    "backgroundImage": "https://images.pexels.com/photos/1769408/pexels-photo-1769408.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+  }
+}

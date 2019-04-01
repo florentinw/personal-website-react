@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export default styled.p`
-  color: ${props => props.theme.bodyTextColor || "gray"};
+  color: ${props => props.theme.mediumContrast};
   font-size: 17px;
   font-weight: 400;
   line-height: 1.7;

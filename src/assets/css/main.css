@@ -1,11 +1,10 @@
 @import "./fonts.css";
 @import "./reset.css";
+
 body {
   font-family: "CircularStd";
-  -moz-osx-font-smoothing: grayscale;
-  /* Firefox */
   -webkit-font-smoothing: antialiased;
-  /* WebKit  */
+  -moz-osx-font-smoothing: grayscale;
   transition: background-color 0.2s ease-in-out;
 }
 

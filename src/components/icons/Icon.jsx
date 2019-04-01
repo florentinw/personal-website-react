@@ -11,7 +11,7 @@ class Icon extends Component {
         height={this.props.height || 30}
         viewBox="0 0 24 24"
         fill="none"
-        stroke={this.props.strokeColor || this.props.theme.iconColor}
+        stroke={this.props.strokeColor || this.props.theme.higherContrast}
         strokeWidth={this.props.strokeWidth || 2}
         strokeLinecap="round"
         strokeLinejoin="round"

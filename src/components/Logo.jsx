@@ -4,7 +4,7 @@ import { ReactComponent as LogoSVG } from "../assets/svg/logo.svg";
 
 class Logo extends Component {
   render() {
-    return <LogoSVG style={{ height: 36 }} />;
+    return <LogoSVG style={{ height: 36, filter: "invert(1)" }} />;
   }
 }
 

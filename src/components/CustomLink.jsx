@@ -4,23 +4,23 @@ import styled from "styled-components";
 import isExternal from "is-url-external";
 
 const InternalLink = styled(Link)`
-  color: ${props => props.theme.linkColor || "black"};
+  color: ${props => props.theme.higherContrast || "black"};
   font-weight: 500;
   text-decoration: none;
   line-height: 1;
   display: inline;
   padding: ${props => (props.noBorder ? `0px` : `0 2px 0.15em 2px`)};
-  border-bottom: ${props => (props.noBorder ? `none` : `0.15em solid ${props.theme.linkBorderColor || "gray"}`)};
+  border-bottom: ${props => (props.noBorder ? `none` : `0.15em solid ${props.theme.lowerContrast || "gray"}`)};
 `;
 
 const ExternalLink = styled.a`
-  color: ${props => props.theme.linkColor || "black"};
+  color: ${props => props.theme.higherContrast || "black"};
   font-weight: 500;
   text-decoration: none;
   line-height: 1;
   display: inline;
   padding: ${props => (props.noBorder ? `0px` : `0 2px 0.15em 2px`)};
-  border-bottom: ${props => (props.noBorder ? `none` : `0.15em solid ${props.theme.linkBorderColor || "gray"}`)};
+  border-bottom: ${props => (props.noBorder ? `none` : `0.15em solid ${props.theme.lowerContrast || "gray"}`)};
 `;
 
 class CustomLink extends React.Component {

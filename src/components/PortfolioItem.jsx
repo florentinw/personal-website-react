@@ -6,7 +6,7 @@ import Label from "./Label";
 import Subtitle from "./Subtitle";
 
 const Wrapper = styled.article`
-  background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
     url("https://images.pexels.com/photos/1963478/pexels-photo-1963478.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat center /
       cover;
   border-radius: 6px;

@@ -46,42 +46,27 @@ class App extends Component {
   }
 
   render() {
-    const colors = {
-      black: "#111111",
-      grayDark: "#777777",
-      gray: "#CCCCCC",
-      grayLight: "#E9E9E9",
-      white: "#FFFFFF"
-    };
     const themes = {
       light: {
-        bodyTextColor: colors.grayDark,
-        labelColor: colors.grayDark,
-        headlineColor: colors.black,
-        backgroundColor: colors.white,
-        buttonTextColor: colors.white,
-        buttonBackgroundColor: colors.black,
-        iconColor: colors.black,
-        linkColor: colors.black,
-        linkBorderColor: colors.grayLight,
-        staticColors: colors
+        background: "#FFFFFF",
+        lowerContrast: "#E9E9E9",
+        lowContrast: "#aaaaaa",
+        mediumContrast: "#888888",
+        highContrast: "#333333",
+        higherContrast: "#111111"
       },
       dark: {
-        bodyTextColor: colors.gray,
-        labelColor: colors.grayDark,
-        headlineColor: colors.white,
-        backgroundColor: colors.black,
-        buttonTextColor: colors.black,
-        buttonBackgroundColor: colors.white,
-        iconColor: colors.white,
-        linkColor: colors.white,
-        linkBorderColor: colors.grayDark,
-        staticColors: colors
+        background: "#111111",
+        lowerContrast: "#333333",
+        lowContrast: "#888888",
+        mediumContrast: "#aaaaaa",
+        highContrast: "#E9E9E9",
+        higherContrast: "#FFFFFF"
       }
     };
 
     let currentTheme = this.state.darkmode ? themes.dark : themes.light;
-    document.body.style = "background-color: " + currentTheme.backgroundColor;
+    document.body.style = "background-color: " + currentTheme.background;
 
     return (
       <div>
@@ -100,8 +85,6 @@ class App extends Component {
                 <span className={s.name} />
               </a>
             ))
-
-            
             */}
           </Router>
         </ThemeProvider>

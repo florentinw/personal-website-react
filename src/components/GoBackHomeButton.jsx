@@ -12,7 +12,7 @@ const Wrapper = styled(CustomLink)`
 class GoBackButton extends Component {
   render() {
     return (
-      <Wrapper to="/" noBorder>
+      <Wrapper to="/" noborder="true">
         <ChevronBackIcon />
         {this.props.children}
       </Wrapper>

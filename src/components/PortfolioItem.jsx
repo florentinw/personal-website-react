@@ -14,7 +14,7 @@ const Wrapper = styled.article`
       : p.theme.lowerContrast};
 
   border-radius: 6px;
-  padding: 32px;
+  padding: calc(10px + 8%);
   margin: 24px 12px;
   cursor: pointer;
 `;
@@ -32,7 +32,7 @@ class PortfolioItem extends Component {
 
     return (
       <Wrapper onClick={this.handleOnClick} backgroundImag={this.props.backgroundImage}>
-        <Label>{this.props.client}</Label>
+        <Label>{this.props.name}</Label>
         <Subtitle>{this.props.headline}</Subtitle>
         <Label>{this.props.skills}</Label>
       </Wrapper>

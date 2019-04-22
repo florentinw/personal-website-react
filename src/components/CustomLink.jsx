@@ -9,8 +9,8 @@ const InternalLink = styled(Link)`
   text-decoration: none;
   line-height: 1;
   display: inline;
-  padding: ${props => (props.noBorder ? `0px` : `0 2px 0.15em 2px`)};
-  border-bottom: ${props => (props.noBorder ? `none` : `0.15em solid ${props.theme.lowerContrast || "gray"}`)};
+  padding: ${props => (props.noborder ? `0px` : `0 2px 0.15em 2px`)};
+  border-bottom: ${props => (props.noborder ? `none` : `0.15em solid ${props.theme.lowerContrast || "gray"}`)};
 `;
 
 const ExternalLink = styled.a`
@@ -19,8 +19,8 @@ const ExternalLink = styled.a`
   text-decoration: none;
   line-height: 1;
   display: inline;
-  padding: ${props => (props.noBorder ? `0px` : `0 2px 0.15em 2px`)};
-  border-bottom: ${props => (props.noBorder ? `none` : `0.15em solid ${props.theme.lowerContrast || "gray"}`)};
+  padding: ${props => (props.noborder ? `0px` : `0 2px 0.15em 2px`)};
+  border-bottom: ${props => (props.noborder ? `none` : `0.15em solid ${props.theme.lowerContrast || "gray"}`)};
 `;
 
 class CustomLink extends React.Component {

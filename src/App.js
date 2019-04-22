@@ -16,7 +16,7 @@ import ErrorPage from "./pages/ErrorPage";
 
 import Footer from "./components/Footer";
 
-//import socialData from "./data/social";
+import portfolioData from "./data/portfolio";
 
 window.t = Translation.getPhrase;
 
@@ -75,17 +75,12 @@ class App extends Component {
               <Switch>
                 <Route exact path="/" component={HomePage} />
                 <Route exact path="/about" component={AboutPage} />
-                <Route path="/project/:slug" component={ProjectPage} />
+                <Route path={`/project/:slug(${Object.keys(portfolioData).join("|")})`} component={ProjectPage} />
                 <Route path="/legal" component={LegalPage} />
                 <Route component={ErrorPage} />
               </Switch>
-              {/*socialData.map(s => (
-              <a key={s.name} href={s.name} title={s.name} target="_top">
-                <span className={s.name} />
-              </a>
-            ))
-            */}
             </Router>
+
             <Footer changeThemeFunction={this.handleSwitchThemeButton} />
           </div>
         </ThemeProvider>

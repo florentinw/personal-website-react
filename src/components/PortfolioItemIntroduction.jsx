@@ -3,7 +3,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 
 import Label from "./Label";
-import Subtitle from "./Subtitle";
+import SubtitleSmall from "./SubtitleSmall";
 import Container from "./Container";
 
 const Wrapper = styled(Container)`
@@ -14,7 +14,7 @@ const Wrapper = styled(Container)`
   }
 `;
 
-const TitleColumn = styled.div`
+const TitleColumn = styled.aside`
   flex: 2;
   margin-right: 20px;
   * {
@@ -22,18 +22,31 @@ const TitleColumn = styled.div`
   }
 `;
 
-const ContentColumn = styled.div`
+const ContentColumn = styled.main`
   flex: 5;
 `;
 
-class LabelSubtitleParagraphLayout extends Component {
+const InfoGroup = styled.div`
+  margin-bottom: 40px;
+  &:last-of-type {
+    margin-bottom: 0px;
+  }
+`;
+
+class PortfolioItemIntroduction extends Component {
   state = {};
   render() {
     return (
       <Wrapper>
         <TitleColumn>
-          <Label>{this.props.label}</Label>
-          <Subtitle>{this.props.title}</Subtitle>
+          <InfoGroup>
+            <Label>Client</Label>
+            <SubtitleSmall>{this.props.client}</SubtitleSmall>
+          </InfoGroup>
+          <InfoGroup>
+            <Label>Skills</Label>
+            <SubtitleSmall>{this.props.skills}</SubtitleSmall>
+          </InfoGroup>
         </TitleColumn>
         <ContentColumn>{this.props.children}</ContentColumn>
       </Wrapper>
@@ -41,9 +54,9 @@ class LabelSubtitleParagraphLayout extends Component {
   }
 }
 
-LabelSubtitleParagraphLayout.propTypes = {
+PortfolioItemIntroduction.propTypes = {
   label: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired
 };
 
-export default LabelSubtitleParagraphLayout;
+export default PortfolioItemIntroduction;

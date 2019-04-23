@@ -5,13 +5,10 @@ body {
   font-family: "CircularStd";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: background-color 0.2s ease-in-out;
 }
 
-.switch-wrapper {
-  position: relative;
-}
-
-.switch-wrapper>div {
-  position: absolute;
+* {
+  transition: color 0.5s ease-in-out;
+  transition: background 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
 }

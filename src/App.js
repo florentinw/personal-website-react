@@ -1,12 +1,11 @@
-import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import React, { Component, Fragment } from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { Helmet } from "react-helmet";
 
 import "./assets/css/main.css";
 
-//import Link from "./components/CustomLink";
-import Translation from "./function/translation";
+import Translation from "./function/Translation";
 
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
@@ -14,6 +13,9 @@ import ProjectPage from "./pages/ProjectPage";
 import LegalPage from "./pages/LegalPage";
 import ErrorPage from "./pages/ErrorPage";
 
+import Button from "./components/Button";
+import CustomLink from "./components/CustomLink";
+import SmallText from "./components/SmallText";
 import Footer from "./components/Footer";
 
 import portfolioData from "./data/portfolio";
@@ -37,10 +39,6 @@ class App extends Component {
     const wantedTheme = this.state.theme === "dark" ? "light" : "dark";
     this.setState({ theme: wantedTheme });
     localStorage.setItem("theme", wantedTheme);
-  };
-
-  componentDidMount = () => {
-    window.globalRef = this;
   };
 
   render = () => {
@@ -67,24 +65,26 @@ class App extends Component {
     document.body.style = "background-color: " + currentTheme.background;
 
     return (
-      <div>
-        <Helmet defaultTitle="Florentin | Freelance Graphic Designer" titleTemplate="%s | Florentin" />
-        <ThemeProvider theme={currentTheme}>
-          <div>
-            <Router>
-              <Switch>
-                <Route exact path="/" component={HomePage} />
-                <Route exact path="/about" component={AboutPage} />
-                <Route path={`/project/:slug(${Object.keys(portfolioData).join("|")})`} component={ProjectPage} />
-                <Route path="/legal" component={LegalPage} />
-                <Route component={ErrorPage} />
-              </Switch>
-            </Router>
-
-            <Footer changeThemeFunction={this.handleSwitchThemeButton} />
-          </div>
-        </ThemeProvider>
-      </div>
+      <ThemeProvider theme={currentTheme}>
+        <BrowserRouter>
+          <Fragment>
+            <Helmet defaultTitle="Florentin | Freelance Graphic Designer" titleTemplate="%s | Florentin" />
+            <Switch>
+              <Route exact path="/" component={HomePage} />
+              <Route exact path="/about" component={AboutPage} />
+              <Route path={`/project/:slug(${Object.keys(portfolioData).join("|")})`} component={ProjectPage} />
+              <Route path="/legal" component={LegalPage} />
+              <Route component={ErrorPage} />
+            </Switch>
+            <Footer
+              style={{ marginBottom: "100px" }}
+              leftContent={<SmallText>2015 - ∞</SmallText>}
+              centerContent={<Button onClick={() => this.handleSwitchThemeButton()}>Switch Theme</Button>}
+              rightContent={<CustomLink to="/legal">Legal</CustomLink>}
+            />
+          </Fragment>
+        </BrowserRouter>
+      </ThemeProvider>
     );
   };
 }

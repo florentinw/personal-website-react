@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import { Helmet } from "react-helmet";
 
 import Header from "../components/Header";
@@ -11,14 +11,11 @@ import CustomLink from "../components/CustomLink";
 class AboutPage extends Component {
   render() {
     return (
-      <div>
+      <Fragment>
         <Helmet title="About me" />
         <Navbar leftContent={<GoBackHomeButton>Back to my works</GoBackHomeButton>} />
         <Header
-          content={`Hi there!
-            I'm Florentin, a young digital product designer from Germany focused on creating digital products for humans.
-
-            With a focus on user interface, web and print design, I strive to create usable and polished products through passionate and deliberate design.`}
+          content={`Hi there!\nI'm Florentin, a young digital product designer from Germany focused on creating digital products for humans.\n\nWith a focus on user interface, web and print design, I strive to create usable and polished products through passionate and deliberate design.`}
         />
         <LabelSubtitleParagraphLayout label="My journey" title="I actually started out in Microsoft Word">
           <BodyText>
@@ -56,7 +53,7 @@ class AboutPage extends Component {
             I’m capable of.
           </BodyText>
         </LabelSubtitleParagraphLayout>
-      </div>
+      </Fragment>
     );
   }
 }

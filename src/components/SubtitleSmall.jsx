@@ -3,4 +3,6 @@ import Subtitle from "./Subtitle";
 
 export default styled(Subtitle)`
   font-size: 22px;
+  max-width: 730px;
+  margin: 0.4em 0 0.6em 0;
 `;

@@ -3,5 +3,6 @@ import Headline from "./Headline";
 
 export default styled(Headline)`
   font-size: 30px;
-  margin: 0.4em 0 0.8em 0;
+  margin: ${props => (props.nopadding ? "0.4em 0 0.6em 0" : "1.5em 0 0.4em 0")};
+  max-width: 730px;
 `;

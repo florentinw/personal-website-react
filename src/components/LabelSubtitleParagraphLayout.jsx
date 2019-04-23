@@ -33,7 +33,7 @@ class LabelSubtitleParagraphLayout extends Component {
       <Wrapper>
         <TitleColumn>
           <Label>{this.props.label}</Label>
-          <Subtitle>{this.props.title}</Subtitle>
+          <Subtitle nopadding="true">{this.props.title}</Subtitle>
         </TitleColumn>
         <ContentColumn>{this.props.children}</ContentColumn>
       </Wrapper>

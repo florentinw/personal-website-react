@@ -4,7 +4,7 @@ import styled from "styled-components";
 import isExternal from "is-url-external";
 
 const InternalLink = styled(Link)`
-  color: ${props => props.theme.higherContrast || "black"};
+  color: ${props => props.color || props.theme.higherContrast || "black"};
   font-weight: 500;
   text-decoration: none;
   line-height: 1;
@@ -14,7 +14,7 @@ const InternalLink = styled(Link)`
 `;
 
 const ExternalLink = styled.a`
-  color: ${props => props.theme.higherContrast || "black"};
+  color: ${props => props.color || props.theme.higherContrast || "black"};
   font-weight: 500;
   text-decoration: none;
   line-height: 1;
@@ -25,7 +25,7 @@ const ExternalLink = styled.a`
 
 class CustomLink extends React.Component {
   render() {
-    return isExternal(this.props.to) ? (
+    return isExternal(this.props.to) | this.props.to.startsWith("mailto:") ? (
       // eslint-disable-next-line
       <ExternalLink target="_blank" href={this.props.to} {...this.props} />
     ) : (

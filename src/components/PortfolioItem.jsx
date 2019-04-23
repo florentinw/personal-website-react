@@ -33,7 +33,7 @@ class PortfolioItem extends Component {
     return (
       <Wrapper onClick={this.handleOnClick} backgroundImag={this.props.backgroundImage}>
         <Label>{this.props.name}</Label>
-        <Subtitle>{this.props.headline}</Subtitle>
+        <Subtitle nopadding="true">{this.props.headline}</Subtitle>
         <Label>{this.props.skills}</Label>
       </Wrapper>
     );
@@ -41,7 +41,7 @@ class PortfolioItem extends Component {
 }
 
 PortfolioItem.propTypes = {
-  client: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   headline: PropTypes.string.isRequired,
   skills: PropTypes.string.isRequired,
   backgroundImage: PropTypes.string,

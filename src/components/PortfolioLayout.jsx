@@ -31,7 +31,7 @@ class PortfolioLayout extends Component {
               return (
                 <PortfolioItem
                   key={slug}
-                  client={portfolioData[slug].client}
+                  name={portfolioData[slug].name}
                   headline={portfolioData[slug].headline}
                   skills={portfolioData[slug].skills}
                   backgroundImage={portfolioData[slug].backgroundImage}
@@ -49,7 +49,7 @@ class PortfolioLayout extends Component {
               return (
                 <PortfolioItem
                   key={slug}
-                  client={portfolioData[slug].client}
+                  name={portfolioData[slug].name}
                   headline={portfolioData[slug].headline}
                   skills={portfolioData[slug].skills}
                   backgroundImage={portfolioData[slug].backgroundImage}

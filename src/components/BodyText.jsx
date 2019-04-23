@@ -7,5 +7,5 @@ export default styled.p`
   line-height: 1.7;
   max-width: 730px;
   letter-spacing: 0.02em;
-  margin: 0.1em 0 0.9em 0;
+  margin: 0.1em 0 1em 0;
 `;

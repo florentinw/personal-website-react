@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import BodyText from "../components/BodyText";
-import Container from "../components/Container";
 import LabelSubtitleParagraphLayout from "../components/LabelSubtitleParagraphLayout";
-import CustomLink from "../components/CustomLink";
 
 class HowToMusicProject extends Component {
   render() {

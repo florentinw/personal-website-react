@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 
 import CustomLink from "./CustomLink";
-import ChevronBackIcon from "./icons/ChevronBackIcon";
+import CloseIcon from "./icons/CloseIcon";
 
 const Wrapper = styled(CustomLink)`
   display: flex;
@@ -13,7 +13,7 @@ class GoBackButton extends Component {
   render() {
     return (
       <Wrapper to="/" noborder="true">
-        <ChevronBackIcon />
+        <CloseIcon />
         {this.props.children}
       </Wrapper>
     );
@@ -21,4 +21,3 @@ class GoBackButton extends Component {
 }
 
 export default GoBackButton;
-//

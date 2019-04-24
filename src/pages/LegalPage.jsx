@@ -9,7 +9,7 @@ import GoBackHomeButton from "../components/GoBackHomeButton";
 import ErrorPage from "../pages/ErrorPage";
 import LegalDisclosurePage from "../pages/legal/LegalDisclosurePage";
 import PrivacyPolicyPage from "../pages/legal/PrivacyPolicyPage";
-import TermsOfConditionsPage from "../pages/legal/TermsOfConditionsPage";
+import TermsAndConditionsPage from "../pages/legal/TermsAndConditionsPage";
 
 class LegalPage extends Component {
   render() {
@@ -23,7 +23,7 @@ class LegalPage extends Component {
               <ul>
                 <InlineNavItem to={this.props.match.path}>Legal Disclosure</InlineNavItem>
                 <InlineNavItem to={`${this.props.match.path}/privacypolicy`}>Privacy Policy</InlineNavItem>
-                <InlineNavItem to={`${this.props.match.path}/termsofconditions`}>Terms of Conditions</InlineNavItem>
+                <InlineNavItem to={`${this.props.match.path}/termsandconditions`}>Terms &amp; Conditions</InlineNavItem>
               </ul>
             </nav>
           }
@@ -31,7 +31,7 @@ class LegalPage extends Component {
         <Switch>
           <Route exact path={this.props.match.path} component={LegalDisclosurePage} />
           <Route path={`${this.props.match.path}/privacypolicy`} component={PrivacyPolicyPage} />
-          <Route path={`${this.props.match.path}/termsofconditions`} component={TermsOfConditionsPage} />
+          <Route path={`${this.props.match.path}/termsandconditions`} component={TermsAndConditionsPage} />
           <Route component={ErrorPage} />
         </Switch>
       </Fragment>

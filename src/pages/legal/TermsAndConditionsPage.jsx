@@ -6,12 +6,12 @@ import Subtitle from "../../components/Subtitle";
 import BodyText from "../../components/BodyText";
 import Container from "../../components/Container";
 
-class TermsOfConditionsPage extends Component {
+class TermsAndConditionsPage extends Component {
   render() {
     return (
       <Fragment>
-        <Helmet title="Terms of Conditions" />
-        <Header content="Terms Of Conditions" />
+        <Helmet title="Terms &amp; Conditions" />
+        <Header content="Terms &amp; Conditions" />
         <Container>
           <Subtitle>General</Subtitle>
           <BodyText>
@@ -164,4 +164,4 @@ class TermsOfConditionsPage extends Component {
   }
 }
 
-export default TermsOfConditionsPage;
+export default TermsAndConditionsPage;

@@ -29,8 +29,8 @@ class List extends Component {
   render = () => {
     return (
       <ListWrapper>
-        {this.props.items.map(item => {
-          return <ListItem>{item}</ListItem>;
+        {this.props.items.map((item, index) => {
+          return <ListItem key={index}>{item}</ListItem>;
         })}
       </ListWrapper>
     );

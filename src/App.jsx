@@ -1,7 +1,9 @@
 import React, { Component, Fragment } from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Router, Route, Switch } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { Helmet } from "react-helmet";
+import ReactPiwik from "react-piwik";
+import { createBrowserHistory } from "history";
 
 import "./assets/css/main.css";
 
@@ -23,6 +25,17 @@ import portfolioData from "./data/portfolio";
 window.t = Translation.getPhrase;
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.history = createBrowserHistory();
+
+    this.matomoInstance = new ReactPiwik({
+      url: "analytics.florentinwalter.de",
+      siteId: 3
+    });
+  }
+
   componentWillMount = () => {
     if (window.prefersDarkmode) {
       this.setState({ theme: "dark" });
@@ -66,7 +79,7 @@ class App extends Component {
 
     return (
       <ThemeProvider theme={currentTheme}>
-        <BrowserRouter>
+        <Router history={this.matomoInstance.connectToHistory(this.history)}>
           <Fragment>
             <Helmet defaultTitle="Florentin | Freelance Graphic Designer" titleTemplate="%s | Florentin" />
             <Switch>
@@ -83,7 +96,7 @@ class App extends Component {
               rightContent={<CustomLink to="/legal">Legal</CustomLink>}
             />
           </Fragment>
-        </BrowserRouter>
+        </Router>
       </ThemeProvider>
     );
   };

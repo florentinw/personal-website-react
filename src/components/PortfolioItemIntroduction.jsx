@@ -55,8 +55,8 @@ class PortfolioItemIntroduction extends Component {
 }
 
 PortfolioItemIntroduction.propTypes = {
-  label: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired
+  client: PropTypes.string.isRequired,
+  skills: PropTypes.string.isRequired
 };
 
 export default PortfolioItemIntroduction;

@@ -7,6 +7,7 @@ import BodyText from "../components/BodyText";
 import GoBackHomeButton from "../components/GoBackHomeButton";
 import Navbar from "../components/Navbar";
 import CustomLink from "../components/CustomLink";
+import Gallery from "../components/Gallery";
 
 class AboutPage extends Component {
   render() {
@@ -53,6 +54,13 @@ class AboutPage extends Component {
             I’m capable of.
           </BodyText>
         </LabelSubtitleParagraphLayout>
+        <Gallery
+          images={[
+            require("../assets/imgs/about/setup.jpg"),
+            require("../assets/imgs/about/work.jpg"),
+            require("../assets/imgs/about/me.jpg")
+          ]}
+        />
       </Fragment>
     );
   }

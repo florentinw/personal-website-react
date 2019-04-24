@@ -14,7 +14,7 @@ export default {
     headline: "Designing physical campains for a digital product",
     skills: "Print Design",
     backgroundImage: "https://images.pexels.com/photos/1769408/pexels-photo-1769408.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    component: HowToMusicProject,
+    component: <HowToMusicProject />,
     summary:
       'In the funk-produced YouTube series "How to Music", the audience accompanies six up-and-coming musicians who are breaking new ground in the music industry.',
     introduction: (
@@ -36,7 +36,7 @@ export default {
     headline: "Rethinking how Gen Z interacts with tech news",
     skills: "web design & branding",
     backgroundImage: "https://images.pexels.com/photos/1769408/pexels-photo-1769408.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    component: ShortTechProject
+    component: <ShortTechProject />
   },
   optikbluemel: {
     name: "Optik Blümel",
@@ -44,7 +44,7 @@ export default {
     headline: "Moving traditional companies into the digital age",
     skills: "Web design & development",
     backgroundImage: "https://images.pexels.com/photos/1769408/pexels-photo-1769408.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    component: OptikBluemelProject
+    component: <OptikBluemelProject />
   },
   other: {
     name: "Other",
@@ -52,6 +52,6 @@ export default {
     headline: "Other Headline",
     skills: "Web design & development",
     backgroundImage: "https://images.pexels.com/photos/1769408/pexels-photo-1769408.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    component: OtherProject
+    component: <OtherProject />
   }
 };

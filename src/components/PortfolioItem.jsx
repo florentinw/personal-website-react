@@ -13,7 +13,7 @@ const Wrapper = styled.article`
       center / cover`
       : p.theme.lowerContrast};
 
-  border-radius: 6px;
+  border-radius: 5px;
   padding: calc(10px + 8%);
   margin: 24px 12px;
   cursor: pointer;

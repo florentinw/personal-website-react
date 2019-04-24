@@ -12,7 +12,7 @@ class InlineNavItem extends Component {
   render() {
     return (
       <Wrapper>
-        <CustomNavLink exact to={this.props.to} activeClass="active">
+        <CustomNavLink exact to={this.props.to} activeclass="active">
           {this.props.children}
         </CustomNavLink>
       </Wrapper>

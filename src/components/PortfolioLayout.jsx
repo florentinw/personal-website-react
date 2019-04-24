@@ -10,15 +10,15 @@ const MainWrapper = styled(Container)`
   display: flex;
   flex-wrap: wrap;
   width: 85%;
+  @media (max-width: 980px) {
+    flex-direction: column;
+  }
 `;
 
 const Wrapper = styled.div`
   display: block;
   flex: 1;
   margin-top: -24px;
-  @media (max-width: 960px) {
-    flex: 1 1 320px !important;
-  }
 `;
 
 class PortfolioLayout extends Component {

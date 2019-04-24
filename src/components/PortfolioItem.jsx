@@ -50,10 +50,14 @@ const Wrapper = styled.article`
       max-width: 40%;
       min-width: 200px;
     }
+    ${Label} {
+      max-width: 55%;
+    }
     ${AddonWrapper} {
       justify-content: flex-end;
       align-items: center;
       ${AddonImage} {
+        max-width: 45%;
       }
     }
   }
@@ -67,6 +71,7 @@ const Wrapper = styled.article`
       justify-content: center;
       align-items: flex-end;
       ${AddonImage} {
+        max-height: 60%;
       }
     }
   }
@@ -74,7 +79,30 @@ const Wrapper = styled.article`
     background: ${p => `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url("${p.background.src}") no-repeat center / cover`};
   }
   &.shorttech {
-    padding-bottom: 300px;
+    padding-bottom: 60%;
+  }
+
+  @media screen and (max-width: 580px) {
+    &.addon-postion-right {
+      ${Subtitle} {
+        max-width: 80%;
+        min-width: 200px;
+      }
+      ${AddonWrapper} {
+        justify-content: center;
+        align-items: flex-end;
+        ${AddonImage} {
+          max-width: 80% !important;
+          margin-bottom: -30%;
+        }
+      }
+    }
+    &.howtomusic {
+      padding-bottom: 90%;
+    }
+    &.optikbluemel {
+      padding-bottom: 55%;
+    }
   }
 `;
 

@@ -34,8 +34,10 @@ class PortfolioLayout extends Component {
                   name={portfolioData[slug].name}
                   headline={portfolioData[slug].headline}
                   skills={portfolioData[slug].skills}
-                  backgroundImage={portfolioData[slug].backgroundImage}
+                  background={portfolioData[slug].background}
+                  addonImage={portfolioData[slug].addonImage}
                   slug={slug}
+                  addonPosition="right"
                 />
               );
             } else {
@@ -52,8 +54,10 @@ class PortfolioLayout extends Component {
                   name={portfolioData[slug].name}
                   headline={portfolioData[slug].headline}
                   skills={portfolioData[slug].skills}
-                  backgroundImage={portfolioData[slug].backgroundImage}
+                  background={portfolioData[slug].background}
+                  addonImage={portfolioData[slug].addonImage}
                   slug={slug}
+                  addonPosition="bottom"
                 />
               );
             } else {

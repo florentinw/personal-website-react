@@ -13,7 +13,11 @@ export default {
     client: "United Creators PMB GmbH",
     headline: "Designing physical campains for a digital product",
     skills: "Print Design",
-    backgroundImage: "https://images.pexels.com/photos/1769408/pexels-photo-1769408.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    background: {
+      type: "img",
+      src: require("../assets/imgs/portfolio/howtomusic/cover/background.jpg")
+    },
+    addonImage: require("../assets/imgs/portfolio/howtomusic/cover/addon.jpg"),
     component: <HowToMusicProject />,
     summary:
       'In the funk-produced YouTube series "How to Music", the audience accompanies six up-and-coming musicians who are breaking new ground in the music industry.',
@@ -35,7 +39,12 @@ export default {
     client: "United Creators PMB GmbH",
     headline: "Rethinking how Gen Z interacts with tech news",
     skills: "web design & branding",
-    backgroundImage: "https://images.pexels.com/photos/1769408/pexels-photo-1769408.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    background: {
+      type: "gradient",
+      from: "#1E7DA3",
+      to: "#4F418F"
+    },
+    addonImage: require("../assets/imgs/portfolio/shorttech/cover/addon.jpg"),
     component: <ShortTechProject />
   },
   optikbluemel: {
@@ -43,7 +52,11 @@ export default {
     client: "United Creators PMB GmbH",
     headline: "Moving traditional companies into the digital age",
     skills: "Web design & development",
-    backgroundImage: "https://images.pexels.com/photos/1769408/pexels-photo-1769408.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    background: {
+      type: "img",
+      src: require("../assets/imgs/portfolio/optikbluemel/cover/background.jpg")
+    },
+    addonImage: require("../assets/imgs/portfolio/optikbluemel/cover/addon.jpg"),
     component: <OptikBluemelProject />
   },
   other: {
@@ -51,7 +64,11 @@ export default {
     client: "United Creators PMB GmbH",
     headline: "Other Headline",
     skills: "Web design & development",
-    backgroundImage: "https://images.pexels.com/photos/1769408/pexels-photo-1769408.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    background: {
+      type: "gradient",
+      from: "#555555",
+      to: "#111111"
+    },
     component: <OtherProject />
   }
 };

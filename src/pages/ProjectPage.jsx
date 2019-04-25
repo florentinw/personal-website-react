@@ -19,11 +19,22 @@ class ProjectPage extends Component {
         <PortfolioItemIntroduction client={currentProject.client} skills={currentProject.skills}>
           {currentProject.introduction}
         </PortfolioItemIntroduction>
-        <img
-          alt={currentProject.name}
-          src={currentProject.backgroundImage}
-          style={{ width: "100%", objectFit: "cover", maxHeight: "60vh" }}
-        />
+
+        {currentProject.background.type === "img" ? (
+          <img
+            alt={currentProject.name}
+            src={currentProject.background.src}
+            style={{ width: "100%", objectFit: "cover", maxHeight: "60vh" }}
+          />
+        ) : (
+          <div
+            style={{
+              width: "100%",
+              background: `linear-gradient(to top right,${currentProject.background.from}, ${currentProject.background.to})`,
+              height: "60vh"
+            }}
+          />
+        )}
         {currentProject.component}
       </Fragment>
     );

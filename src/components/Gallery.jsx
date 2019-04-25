@@ -22,7 +22,7 @@ const Item = styled.div`
     padding-top: 100%;
   }
   img {
-    position: absolute;
+    position: ${p => (p.squared ? "absolute;" : "relative")};
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -34,8 +34,8 @@ class Gallery extends Component {
       <Wrapper>
         {this.props.images.map((source, index) => {
           return (
-            <Item>
-              <Image src={source} key={index} />
+            <Item key={index} squared={this.props.squared}>
+              <Image src={source} />
             </Item>
           );
         })}
@@ -45,4 +45,3 @@ class Gallery extends Component {
 }
 
 export default Gallery;
-//

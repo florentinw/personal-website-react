@@ -9,17 +9,15 @@ const FlexContainer = styled(Container)`
   padding: 40px 0;
   text-align: center;
 
-  > * {
+  > *:not(:empty) {
     flex: 1;
   }
 
   > *:first-child {
     text-align: left;
-    flex: 2;
   }
   > *:last-child {
     text-align: right;
-    flex: 2;
   }
 `;
 

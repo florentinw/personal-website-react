@@ -29,7 +29,7 @@ const ContentColumn = styled.main`
 const InfoGroup = styled.div`
   margin-bottom: 40px;
   &:last-of-type {
-    margin-bottom: 0px;
+    margin-bottom: 100px;
   }
 `;
 

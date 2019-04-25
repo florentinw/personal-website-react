@@ -8,4 +8,8 @@ export default styled.h1`
   letter-spacing: 0.01em;
   margin: 0.1em 0 0.9em 0;
   white-space: pre-line;
+
+  @media screen and (max-width: 425px) {
+    font-size: 32px;
+  }
 `;

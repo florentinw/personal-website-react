@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { Redirect } from "react-router";
+import Tilty from "react-tilty";
 
 import Label from "./Label";
 import Subtitle from "./Subtitle";
@@ -26,7 +27,7 @@ const AddonImage = styled.img`
 
 const Wrapper = styled.article`
   border-radius: 5px;
-  padding: calc(20px + 8%) 65px;
+  padding: calc(20px + 8%) calc(14px + 8%);
   margin: 24px 12px;
   cursor: pointer;
   position: relative;
@@ -48,7 +49,7 @@ const Wrapper = styled.article`
   &.addon-postion-right {
     ${Subtitle} {
       max-width: 40%;
-      min-width: 200px;
+      min-width: 220px;
     }
     ${Label} {
       max-width: 55%;
@@ -58,6 +59,7 @@ const Wrapper = styled.article`
       align-items: center;
       ${AddonImage} {
         max-width: 45%;
+        margin-right: -3%;
       }
     }
   }
@@ -65,7 +67,7 @@ const Wrapper = styled.article`
   &.addon-postion-bottom {
     ${Subtitle} {
       max-width: 80%;
-      min-width: 200px;
+      min-width: 220px;
     }
     ${AddonWrapper} {
       justify-content: center;
@@ -81,19 +83,24 @@ const Wrapper = styled.article`
   &.shorttech {
     padding-bottom: 60%;
   }
+  &.optikbluemel ${AddonImage} {
+    max-width: 65% !important;
+    margin-right: -20% !important;
+  }
 
   @media screen and (max-width: 580px) {
+    ${Subtitle} {
+      width: 100%;
+      hyphens: auto;
+    }
     &.addon-postion-right {
-      ${Subtitle} {
-        max-width: 80%;
-        min-width: 200px;
-      }
       ${AddonWrapper} {
         justify-content: center;
         align-items: flex-end;
         ${AddonImage} {
           max-width: 80% !important;
           margin-bottom: -30%;
+          margin-right: 0 !important;
         }
       }
     }
@@ -102,16 +109,20 @@ const Wrapper = styled.article`
     }
     &.optikbluemel {
       padding-bottom: 55%;
+      ${AddonImage} {
+        margin-bottom: 0% !important;
+      }
     }
   }
 `;
 
 class PortfolioItem extends Component {
-  handleOnClick = () => {
-    this.setState({ redirect: true });
-  };
   state = {
     redirect: false
+  };
+
+  handleOnClick = () => {
+    this.setState({ redirect: true });
   };
 
   render = () => {
@@ -120,26 +131,35 @@ class PortfolioItem extends Component {
     }
 
     return (
-      <Wrapper
-        onClick={this.handleOnClick}
-        background={this.props.background}
-        className={[
-          this.props.name
-            .toLowerCase()
-            .replace(/\s/g, "")
-            .replace(/\u00fc/g, "ue"),
-          `addon-postion-${this.props.addonPosition}`
-        ].join(" ")}
+      <Tilty
+        settings={{
+          scale: 1.02,
+          max: 6,
+          speed: 1000
+        }}
+        style={{ transformStyle: "preserve-3d" }}
       >
-        <Label>{this.props.name}</Label>
-        <Subtitle nopadding="true" style={{ lineHeight: 1.2 }}>
-          {this.props.headline}
-        </Subtitle>
-        <Label>{this.props.skills}</Label>
-        <AddonWrapper>
-          <AddonImage src={this.props.addonImage} />
-        </AddonWrapper>
-      </Wrapper>
+        <Wrapper
+          onClick={this.handleOnClick}
+          background={this.props.background}
+          className={[
+            this.props.name
+              .toLowerCase()
+              .replace(/\s/g, "")
+              .replace(/\u00fc/g, "ue"),
+            `addon-postion-${this.props.addonPosition}`
+          ].join(" ")}
+        >
+          <Label>{this.props.name}</Label>
+          <Subtitle nopadding="true" style={{ lineHeight: 1.2 }}>
+            {this.props.headline}
+          </Subtitle>
+          <Label>{this.props.skills}</Label>
+          <AddonWrapper>
+            <AddonImage src={this.props.addonImage} />
+          </AddonWrapper>
+        </Wrapper>
+      </Tilty>
     );
   };
 }

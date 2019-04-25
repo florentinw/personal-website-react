@@ -15,4 +15,5 @@ export default styled.button`
   font-size: 12px;
   letter-spacing: 0.03em;
   cursor: pointer;
+  white-space: nowrap;
 `;

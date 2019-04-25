@@ -55,6 +55,7 @@ class AboutPage extends Component {
           </BodyText>
         </LabelSubtitleParagraphLayout>
         <Gallery
+          squared
           images={[
             require("../assets/imgs/about/setup.jpg"),
             require("../assets/imgs/about/work.jpg"),

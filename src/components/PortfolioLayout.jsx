@@ -9,8 +9,8 @@ import portfolioData from "../data/portfolio.js";
 const MainWrapper = styled(Container)`
   display: flex;
   flex-wrap: wrap;
-  width: 85%;
-  @media (max-width: 980px) {
+  width: 100%;
+  @media (max-width: 960px) {
     flex-direction: column;
   }
 `;

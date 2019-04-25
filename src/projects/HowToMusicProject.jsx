@@ -1,11 +1,12 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import BodyText from "../components/BodyText";
 import LabelSubtitleParagraphLayout from "../components/LabelSubtitleParagraphLayout";
+import Gallery from "../components/Gallery";
 
 class HowToMusicProject extends Component {
   render() {
     return (
-      <div>
+      <Fragment>
         <LabelSubtitleParagraphLayout label="The Lorem" title="Lorem ipsum dolor sit amet">
           <BodyText>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
@@ -18,7 +19,14 @@ class HowToMusicProject extends Component {
             takimata sanctus est Lorem ipsum dolor sit amet.
           </BodyText>
         </LabelSubtitleParagraphLayout>
-      </div>
+        <Gallery
+          images={[
+            require("../assets/imgs/portfolio/howtomusic/poster1.jpg"),
+            require("../assets/imgs/portfolio/howtomusic/poster2.jpg"),
+            require("../assets/imgs/portfolio/howtomusic/poster3.jpg")
+          ]}
+        />
+      </Fragment>
     );
   }
 }

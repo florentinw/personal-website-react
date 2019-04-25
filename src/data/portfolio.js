@@ -13,12 +13,6 @@ export default {
     client: "United Creators PMB GmbH",
     headline: "Designing physical campains for a digital product",
     skills: "Print Design",
-    background: {
-      type: "img",
-      src: require("../assets/imgs/portfolio/howtomusic/cover/background.jpg")
-    },
-    addonImage: require("../assets/imgs/portfolio/howtomusic/cover/addon.jpg"),
-    component: <HowToMusicProject />,
     summary:
       'In the funk-produced YouTube series "How to Music", the audience accompanies six up-and-coming musicians who are breaking new ground in the music industry.',
     introduction: (
@@ -32,13 +26,32 @@ export default {
           record deal!
         </BodyText>
       </div>
-    )
+    ),
+    background: {
+      type: "img",
+      src: require("../assets/imgs/portfolio/howtomusic/cover/background.jpg")
+    },
+    addonImage: require("../assets/imgs/portfolio/howtomusic/poster2.jpg"),
+    component: <HowToMusicProject />
   },
   shorttech: {
     name: "ShortTech",
-    client: "United Creators PMB GmbH",
+    client: "ShortTech",
     headline: "Rethinking how Gen Z interacts with tech news",
-    skills: "web design & branding",
+    skills: "Web Design & Branding",
+    summary: "Shorttech changes the way how young people interact with tech media",
+    introduction: (
+      <div>
+        <BodyText>
+          In the funk-produced YouTube series "How to Music", the audience accompanies six up-and-coming musicians who are breaking new
+          ground in the music industry.
+        </BodyText>
+        <BodyText>
+          How to Music coaches and supports the musicians with tips, tricks and workshops to bring them closer to their big dream of a
+          record deal!
+        </BodyText>
+      </div>
+    ),
     background: {
       type: "gradient",
       from: "#1E7DA3",
@@ -49,9 +62,23 @@ export default {
   },
   optikbluemel: {
     name: "Optik Blümel",
-    client: "United Creators PMB GmbH",
+    client: "Blümel & Liebschwager GbR",
     headline: "Moving traditional companies into the digital age",
-    skills: "Web design & development",
+    skills: "Web Design & Development",
+    summary:
+      'In the funk-produced YouTube series "How to Music", the audience accompanies six up-and-coming musicians who are breaking new ground in the music industry.',
+    introduction: (
+      <div>
+        <BodyText>
+          In the funk-produced YouTube series "How to Music", the audience accompanies six up-and-coming musicians who are breaking new
+          ground in the music industry.
+        </BodyText>
+        <BodyText>
+          How to Music coaches and supports the musicians with tips, tricks and workshops to bring them closer to their big dream of a
+          record deal!
+        </BodyText>
+      </div>
+    ),
     background: {
       type: "img",
       src: require("../assets/imgs/portfolio/optikbluemel/cover/background.jpg")
@@ -61,9 +88,23 @@ export default {
   },
   other: {
     name: "Other",
-    client: "United Creators PMB GmbH",
+    client: "Someone AG",
     headline: "Other Headline",
-    skills: "Web design & development",
+    skills: "Web Design & Development",
+    summary:
+      'In the funk-produced YouTube series "How to Music", the audience accompanies six up-and-coming musicians who are breaking new ground in the music industry.',
+    introduction: (
+      <div>
+        <BodyText>
+          In the funk-produced YouTube series "How to Music", the audience accompanies six up-and-coming musicians who are breaking new
+          ground in the music industry.
+        </BodyText>
+        <BodyText>
+          How to Music coaches and supports the musicians with tips, tricks and workshops to bring them closer to their big dream of a
+          record deal!
+        </BodyText>
+      </div>
+    ),
     background: {
       type: "gradient",
       from: "#555555",

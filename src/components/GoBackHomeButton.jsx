@@ -7,6 +7,11 @@ import ChevronBackIcon from "./icons/ChevronBackIcon";
 const Wrapper = styled(CustomLink)`
   display: flex;
   align-items: center;
+  line-height: 1.3;
+
+  svg {
+    margin-right: 10px;
+  }
 `;
 
 class GoBackButton extends Component {

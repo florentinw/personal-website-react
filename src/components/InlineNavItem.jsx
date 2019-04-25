@@ -6,6 +6,12 @@ import CustomNavLink from "../components/CustomNavLink";
 const Wrapper = styled.li`
   display: inline;
   margin-left: 15px;
+
+  @media screen and (max-width: 425px) {
+    display: block;
+    line-height: 1.6;
+    margin: 6px 0;
+  }
 `;
 
 class InlineNavItem extends Component {

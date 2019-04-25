@@ -7,7 +7,7 @@ import { createBrowserHistory } from "history";
 
 import "./assets/css/main.css";
 
-import Translation from "./function/Translation.jsx";
+import Translation from "./function/translation";
 
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";

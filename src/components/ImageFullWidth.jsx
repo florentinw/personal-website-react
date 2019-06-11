@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export default styled.img`
-  border-radius: 5px;
   width: 100%;
+  object-fit: cover;
+  max-height: 60vh;
 `;

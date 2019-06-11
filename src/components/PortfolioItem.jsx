@@ -133,8 +133,8 @@ class PortfolioItem extends Component {
     return (
       <Tilty
         settings={{
-          scale: 1.02,
-          max: 7,
+          scale: 1.0175,
+          max: 8,
           speed: 1000
         }}
         style={{ transformStyle: "preserve-3d" }}

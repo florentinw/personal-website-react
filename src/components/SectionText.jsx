@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
+import Container from "./Container";
 import Label from "./Label";
 import Subtitle from "./Subtitle";
-import Container from "./Container";
 import BodyText from "./BodyText";
 
 const Wrapper = styled(Container)`
@@ -15,7 +15,7 @@ const Wrapper = styled(Container)`
   }
 `;
 
-const TitleColumn = styled.div`
+const TitleColumn = styled.header`
   flex: 2;
   margin-right: 20px;
   * {
@@ -23,30 +23,28 @@ const TitleColumn = styled.div`
   }
 `;
 
-const ContentColumn = styled.div`
+const ContentColumn = styled.main`
   flex: 5;
 `;
 
-class TwoColumnsWithLabelTitleText extends Component {
-  state = {};
+class SectionText extends Component {
   render() {
     return (
       <Wrapper>
         <TitleColumn>
-          <Label>{this.props.label}</Label>
-          <Subtitle nopadding="true">{this.props.title}</Subtitle>
-          <BodyText>{this.props.text}</BodyText>
+          {this.props.label ? <Label>{this.props.label}</Label> : void 0}
+          {this.props.title ? <Subtitle nopadding="true">{this.props.title}</Subtitle> : void 0}
+          {this.props.text ? <BodyText>{this.props.text}</BodyText> : void 0}
         </TitleColumn>
         <ContentColumn>{this.props.children}</ContentColumn>
       </Wrapper>
     );
   }
 }
-
-TwoColumnsWithLabelTitleText.propTypes = {
+SectionText.propTypes = {
   label: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   text: PropTypes.string
 };
 
-export default TwoColumnsWithLabelTitleText;
+export default SectionText;

@@ -8,7 +8,7 @@ import Container from "./Container";
 
 const Wrapper = styled(Container)`
   display: flex;
-  margin: 80px auto;
+  margin-top: 80px;
   @media (max-width: 768px) {
     flex-direction: column;
   }
@@ -28,9 +28,6 @@ const ContentColumn = styled.main`
 
 const InfoGroup = styled.div`
   margin-bottom: 40px;
-  &:last-of-type {
-    margin-bottom: 100px;
-  }
 `;
 
 class PortfolioItemIntroduction extends Component {

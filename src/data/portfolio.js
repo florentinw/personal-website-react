@@ -41,7 +41,7 @@ export default {
     client: "ShortTech",
     headline: "Rethinking how Gen Z interacts with tech news",
     skills: "Web Design & Branding",
-    summary: "ShortTech hugely simplifies the way young generations consume  consumer electronic media.",
+    summary: "ShortTech truly simplifies the way young generations consume  consumer electronic media.",
     introduction: (
       <div>
         <BodyText>

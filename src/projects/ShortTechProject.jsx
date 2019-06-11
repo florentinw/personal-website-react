@@ -57,7 +57,7 @@ class HowToMusicProject extends Component {
           <SectionText label="Alexa Flash Briefing Skill" title="Alexa, tell me the news">
             <BodyText>
               Together with the team from ShortTech we also developed a custom Alexa Skill, which directly integrates with the newest tweets
-              &amp; blog posts. Just say "Alexa, tell me the news" and be always up to date!
+              &amp; blog posts. Just say "Alexa, tell me the news" and stay always up to date!
             </BodyText>
             <BodyText>
               Customers discover and enable the skill in the Alexa app or through voice, the first time they listen to flash briefing.

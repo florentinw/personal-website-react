@@ -54,8 +54,8 @@ class AboutPage extends Component {
         </SectionText>
         <SectionText label="Expertise" title="My focus">
           <BodyText>
-            I mainly focus on UI / UX, website design & development and print design – but I’m happy to work with you on whatever you think
-            I’m capable of.
+            I mainly focus on UI / UX, website design &amp; development and print design – but I’m happy to work with you on whatever you
+            think I’m capable of.
           </BodyText>
         </SectionText>
         <Gallery

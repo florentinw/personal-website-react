@@ -15,7 +15,7 @@ class ShortTechProject extends Component {
         <Section>
           <ImageWithContainer
             src={require("../assets/imgs/portfolio/shorttech/business-cards.jpg")}
-            tinySrc={require("../assets/imgs/portfolio/shorttech/business-cards-tiny.jpg")}
+            srcTiny={require("../assets/imgs/portfolio/shorttech/business-cards-tiny.jpg")}
           />
           <SectionText
             label="The Logo"
@@ -25,14 +25,14 @@ class ShortTechProject extends Component {
           >
             <Image
               src={require("../assets/imgs/portfolio/shorttech/logo-showcase.jpg")}
-              tinySrc={require("../assets/imgs/portfolio/shorttech/logo-showcase-tiny.jpg")}
+              srcTiny={require("../assets/imgs/portfolio/shorttech/logo-showcase-tiny.jpg")}
             />
           </SectionText>
         </Section>
         <Section>
           <ImageWithContainer
             src={require("../assets/imgs/portfolio/shorttech/twitter-app.jpg")}
-            tinySrc={require("../assets/imgs/portfolio/shorttech/twitter-app-tiny.jpg")}
+            srcTiny={require("../assets/imgs/portfolio/shorttech/twitter-app-tiny.jpg")}
           />
           <SectionText label="Why Twitter" title="Go where your community lives">
             <BodyText>
@@ -63,7 +63,16 @@ class ShortTechProject extends Component {
         </Section>
         <Section>
           <Gallery
-            images={[require("../assets/imgs/portfolio/shorttech/stickers.jpg"), require("../assets/imgs/portfolio/shorttech/tshirt.jpg")]}
+            images={[
+              {
+                src: require("../assets/imgs/portfolio/shorttech/stickers.jpg"),
+                srcTiny: require("../assets/imgs/portfolio/shorttech/stickers-tiny.jpg")
+              },
+              {
+                src: require("../assets/imgs/portfolio/shorttech/tshirt.jpg"),
+                srcTiny: require("../assets/imgs/portfolio/shorttech/tshirt-tiny.jpg")
+              }
+            ]}
           />
           <SectionText label="Materials for events" title="Being present">
             <BodyText>

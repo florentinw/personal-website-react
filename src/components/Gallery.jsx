@@ -36,10 +36,10 @@ class Gallery extends Component {
   render = () => {
     return (
       <Wrapper>
-        {this.props.images.map((source, index) => {
+        {this.props.images.map((item, index) => {
           return (
             <Item key={index} squared={this.props.squared}>
-              <Image src={source} />
+              {typeof item === "object" ? <Image src={item.src} srcTiny={item.srcTiny} /> : <Image src={item} />}
             </Item>
           );
         })}

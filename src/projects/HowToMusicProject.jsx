@@ -12,7 +12,10 @@ class HowToMusicProject extends Component {
     return (
       <Fragment>
         <Section>
-          <ImageWithContainer src={require("../assets/imgs/portfolio/howtomusic/real1.jpg")} />
+          <ImageWithContainer
+            src={require("../assets/imgs/portfolio/howtomusic/real1.jpg")}
+            srcTiny={require("../assets/imgs/portfolio/howtomusic/real1-tiny.jpg")}
+          />
           <SectionText label="The Campaign" title="All throughout Berlin">
             <BodyText>
               In order to initially promote the show, a poster campaign was initiated. The posters were hung up all over Berlin, where the
@@ -25,16 +28,34 @@ class HowToMusicProject extends Component {
           </SectionText>
           <Gallery
             images={[
-              require("../assets/imgs/portfolio/howtomusic/poster1.jpg"),
-              require("../assets/imgs/portfolio/howtomusic/poster2.jpg"),
-              require("../assets/imgs/portfolio/howtomusic/poster3.jpg")
+              {
+                src: require("../assets/imgs/portfolio/howtomusic/poster1.jpg"),
+                srcTiny: require("../assets/imgs/portfolio/howtomusic/poster1-tiny.jpg")
+              },
+              {
+                src: require("../assets/imgs/portfolio/howtomusic/poster2.jpg"),
+                srcTiny: require("../assets/imgs/portfolio/howtomusic/poster2-tiny.jpg")
+              },
+              {
+                src: require("../assets/imgs/portfolio/howtomusic/poster3.jpg"),
+                srcTiny: require("../assets/imgs/portfolio/howtomusic/poster3-tiny.jpg")
+              }
             ]}
           />
           <Gallery
             images={[
-              require("../assets/imgs/portfolio/howtomusic/poster4.jpg"),
-              require("../assets/imgs/portfolio/howtomusic/poster5.jpg"),
-              require("../assets/imgs/portfolio/howtomusic/poster6.jpg")
+              {
+                src: require("../assets/imgs/portfolio/howtomusic/poster4.jpg"),
+                srcTiny: require("../assets/imgs/portfolio/howtomusic/poster4-tiny.jpg")
+              },
+              {
+                src: require("../assets/imgs/portfolio/howtomusic/poster5.jpg"),
+                srcTiny: require("../assets/imgs/portfolio/howtomusic/poster5-tiny.jpg")
+              },
+              {
+                src: require("../assets/imgs/portfolio/howtomusic/poster6.jpg"),
+                srcTiny: require("../assets/imgs/portfolio/howtomusic/poster6-tiny.jpg")
+              }
             ]}
           />
         </Section>
@@ -44,20 +65,38 @@ class HowToMusicProject extends Component {
           />
         </Section>
         <Section>
-          <ImageWithContainer src={require("../assets/imgs/portfolio/howtomusic/header2.jpg")} />
+          <ImageWithContainer
+            src={require("../assets/imgs/portfolio/howtomusic/header.jpg")}
+            srcTiny={require("../assets/imgs/portfolio/howtomusic/header-tiny.jpg")}
+          />
           <SectionText label="Channel Designs" title="Present on all channels">
             <BodyText>
               I designed the complete channel design from Banner, profile Picture and Thumbnail Template for all platforms. Working with
               funk branding guidelines gives all channels of the content network "funk" a professional and unified look.
             </BodyText>
           </SectionText>
-          <ImageWithContainer src={require("../assets/imgs/portfolio/howtomusic/yt.jpg")} />
+          <ImageWithContainer
+            src={require("../assets/imgs/portfolio/howtomusic/yt.jpg")}
+            srcTiny={require("../assets/imgs/portfolio/howtomusic/yt-tiny.jpg")}
+          />
           <Gallery
-            images={[require("../assets/imgs/portfolio/howtomusic/thumbnail.jpg"), require("../assets/imgs/portfolio/howtomusic/logo.jpg")]}
+            images={[
+              {
+                src: require("../assets/imgs/portfolio/howtomusic/thumbnail.jpg"),
+                srcTiny: require("../assets/imgs/portfolio/howtomusic/thumbnail-tiny.jpg")
+              },
+              {
+                src: require("../assets/imgs/portfolio/howtomusic/logo.jpg"),
+                srcTiny: require("../assets/imgs/portfolio/howtomusic/logo-tiny.jpg")
+              }
+            ]}
           />
         </Section>
         <Section>
-          <ImageWithContainer src={require("../assets/imgs/portfolio/howtomusic/talents-overview.jpg")} />
+          <ImageWithContainer
+            src={require("../assets/imgs/portfolio/howtomusic/talents-overview.jpg")}
+            srcTiny={require("../assets/imgs/portfolio/howtomusic/talents-overview-tiny.jpg")}
+          />
           <SectionText label="The Talent Channels" title="More content for fans">
             <BodyText>
               On the individual channels of the main protagonists viewers have the chance to discover what's going on behind the scenes of
@@ -65,10 +104,16 @@ class HowToMusicProject extends Component {
             </BodyText>
             <BodyText>Besides designing the main channel look, I was also in charge of the individual channel designs.</BodyText>
           </SectionText>
-          <ImageWithContainer src={require("../assets/imgs/portfolio/howtomusic/talents-header.jpg")} />
+          <ImageWithContainer
+            src={require("../assets/imgs/portfolio/howtomusic/talents-header.jpg")}
+            srcTiny={require("../assets/imgs/portfolio/howtomusic/talents-header-tiny.jpg")}
+          />
         </Section>
         <Section>
-          <ImageWithContainer src={require("../assets/imgs/portfolio/howtomusic/funk.jpg")} />
+          <ImageWithContainer
+            src={require("../assets/imgs/portfolio/howtomusic/funk.jpg")}
+            srcTiny={require("../assets/imgs/portfolio/howtomusic/funk-tiny.jpg")}
+          />
           <SectionText label="About funk" title="funk is content network">
             <BodyText>
               funk unites the online formats from ARD and ZDF, the public service broadcasting in Germany, focused on reaching a younger

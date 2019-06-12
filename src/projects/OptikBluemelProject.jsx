@@ -9,15 +9,24 @@ class HowToMusicProject extends Component {
     return (
       <Fragment>
         <Section>
-          <ImageWithContainer src={require("../assets/imgs/portfolio/optikbluemel/desktop.jpg")} />
+          <ImageWithContainer
+            src={require("../assets/imgs/portfolio/optikbluemel/desktop.jpg")}
+            srcTiny={require("../assets/imgs/portfolio/optikbluemel/desktop-tiny.jpg")}
+          />
           <SectionText
             label="The Website"
             title="Modern, simple &amp; clear"
             text="They reached out to impart a professional and modern look to their dated website. For an independent content editing experience I utilized WordPress together with a custom theme."
           >
-            <Image src={require("../assets/imgs/portfolio/optikbluemel/iphone.jpg")} />
+            <Image
+              src={require("../assets/imgs/portfolio/optikbluemel/iphone.jpg")}
+              srcTiny={require("../assets/imgs/portfolio/optikbluemel/iphone-tiny.jpg")}
+            />
           </SectionText>
-          <ImageWithContainer src={require("../assets/imgs/portfolio/optikbluemel/screenshot.jpg")} />
+          <ImageWithContainer
+            src={require("../assets/imgs/portfolio/optikbluemel/screenshot.jpg")}
+            srcTiny={require("../assets/imgs/portfolio/optikbluemel/screenshot-tiny.jpg")}
+          />
         </Section>
       </Fragment>
     );

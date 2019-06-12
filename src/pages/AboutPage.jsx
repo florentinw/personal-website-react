@@ -61,9 +61,18 @@ class AboutPage extends Component {
         <Gallery
           squared
           images={[
-            require("../assets/imgs/about/setup.jpg"),
-            require("../assets/imgs/about/work.jpg"),
-            require("../assets/imgs/about/me.jpg")
+            {
+              src: require("../assets/imgs/about/setup.jpg"),
+              srcTiny: require("../assets/imgs/about/setup-tiny.jpg")
+            },
+            {
+              src: require("../assets/imgs/about/work.jpg"),
+              srcTiny: require("../assets/imgs/about/work-tiny.jpg")
+            },
+            {
+              src: require("../assets/imgs/about/me.jpg"),
+              srcTiny: require("../assets/imgs/about/me-tiny.jpg")
+            }
           ]}
         />
       </Fragment>

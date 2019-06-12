@@ -6,9 +6,9 @@ const StyledImage = styled.img`
   width: 100%;
 `;
 const TinyImage = styled(StyledImage)`
-  transform: scale(1.1);
+  transform: scale(${p => (p.highQualityLoaded ? "1" : "1.1")});
   filter: blur(${p => (p.highQualityLoaded ? "0px" : "50px")});
-  transition: filter 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
 `;
 const TinyWrapper = styled.div`
   overflow: hidden;
@@ -20,12 +20,12 @@ class Image extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      imgSrc: this.props.tinySrc,
+      imgSrc: this.props.srcTiny,
       loadCounter: 0
     };
   }
   render() {
-    if (this.props.tinySrc) {
+    if (this.props.srcTiny) {
       return (
         <TinyWrapper>
           <TinyImage

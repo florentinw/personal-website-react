@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import { Helmet } from "react-helmet";
+import SEO from "../components/SEO";
 
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
@@ -9,7 +9,7 @@ class ErrorPage extends Component {
   render() {
     return (
       <Fragment>
-        <Helmet title="Error" />
+        <SEO title="Error" description="An error has occurred" />
         <Navbar leftContent={<GoBackButton>Back to home</GoBackButton>} />
         <Header content="Error" />
       </Fragment>

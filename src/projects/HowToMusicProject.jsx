@@ -60,12 +60,10 @@ class HowToMusicProject extends Component {
           <ImageWithContainer src={require("../assets/imgs/portfolio/howtomusic/talents-overview.jpg")} />
           <SectionText label="The Talent Channels" title="More content for fans">
             <BodyText>
-              <BodyText>
-                On the individual channels of the main protagonists viewers have the chance to discover what's going on behind the scenes of
-                How to Music on the hard way to a music career and stay up to date with exciting blogs week after week.
-              </BodyText>
-              <BodyText>Besides designing the main channel look, I was also in charge of the individual channel designs.</BodyText>
+              On the individual channels of the main protagonists viewers have the chance to discover what's going on behind the scenes of
+              How to Music on the hard way to a music career and stay up to date with exciting blogs week after week.
             </BodyText>
+            <BodyText>Besides designing the main channel look, I was also in charge of the individual channel designs.</BodyText>
           </SectionText>
           <ImageWithContainer src={require("../assets/imgs/portfolio/howtomusic/talents-header.jpg")} />
         </Section>

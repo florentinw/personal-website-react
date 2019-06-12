@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
-import { Helmet } from "react-helmet";
 
+import SEO from "../../components/SEO";
 import Header from "../../components/Header";
 import BodyText from "../../components/BodyText";
 import Highlight from "../../components/Highlight";
@@ -10,7 +10,7 @@ class LegalDisclosurePage extends Component {
   render() {
     return (
       <Fragment>
-        <Helmet title="Legal Disclosure" />
+        <SEO title="Legal Disclosure" />
         <Header content="Provider identification pursuant to §5 of the TMG" />
         <Container>
           <BodyText>

@@ -13,7 +13,11 @@ class AboutPage extends Component {
   render() {
     return (
       <Fragment>
-        <SEO title="About me" />
+        <SEO
+          title="About me"
+          description="Hi there! I'm Florentin, a young digital product designer from Germany focused on creating digital products for humans."
+          cover={require("../assets/imgs/about/card.jpg")}
+        />
         <Navbar leftContent={<GoBackHomeButton>Back to my works</GoBackHomeButton>} />
         <Header
           content={`Hi there!\nI'm Florentin, a young digital product designer from Germany focused on creating digital products for humans.\n\nWith a focus on user interface, web and print design, I strive to create usable and polished products through passionate and deliberate design.`}

@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { Router, Route, Switch } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-import { Helmet } from "react-helmet";
 import ReactPiwik from "react-piwik";
 import { createBrowserHistory } from "history";
 
@@ -19,6 +18,7 @@ import Button from "./components/Button";
 import CustomLink from "./components/CustomLink";
 import SmallText from "./components/SmallText";
 import Footer from "./components/Footer";
+import SEO from "./components/SEO";
 
 import portfolioData from "./data/portfolio";
 
@@ -81,7 +81,7 @@ class App extends Component {
       <ThemeProvider theme={currentTheme}>
         <Router history={this.matomoInstance.connectToHistory(this.history)}>
           <Fragment>
-            <Helmet defaultTitle="Florentin | Freelance Graphic Designer" titleTemplate="%s | Florentin" />
+            <SEO />
             <Switch>
               <Route exact path="/" component={HomePage} />
               <Route exact path="/about" component={AboutPage} />

@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import { Helmet } from "react-helmet";
+import SEO from "../../components/SEO";
 
 import Header from "../../components/Header";
 import Subtitle from "../../components/Subtitle";
@@ -14,7 +14,7 @@ class PrivacyPolicyPage extends Component {
   render() {
     return (
       <Fragment>
-        <Helmet title="Privacy Policy" />
+        <SEO title="Privacy Policy" />
         <Header content="In general, our website can be used without providing any personal data. If personal data (such as name, postal or email addresses) are collected, this will occur on a voluntary basis, in so far as possible." />
         <Container>
           <Subtitle>General</Subtitle>

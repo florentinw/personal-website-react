@@ -34,6 +34,7 @@ export default {
       src: require("../assets/imgs/portfolio/howtomusic/cover/background.jpg")
     },
     addonImage: require("../assets/imgs/portfolio/howtomusic/poster2.jpg"),
+    seoImage: require("../assets/imgs/portfolio/howtomusic/card.jpg"),
     component: <HowToMusicProject />
   },
   shorttech: {
@@ -89,6 +90,7 @@ export default {
       from: "#222427"
     },
     addonImage: require("../assets/imgs/portfolio/optikbluemel/cover/addon.jpg"),
+    seoImage: require("../assets/imgs/portfolio/optikbluemel/card.jpg"),
     component: <OptikBluemelProject />
   }
 };

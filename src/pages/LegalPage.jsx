@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { Route, Switch } from "react-router";
-import { Helmet } from "react-helmet";
+import SEO from "../components/SEO";
 
 import Navbar from "../components/Navbar";
 import InlineNavItem from "../components/InlineNavItem";
@@ -15,7 +15,7 @@ class LegalPage extends Component {
   render() {
     return (
       <Fragment>
-        <Helmet title="Legal" />
+        <SEO title="Legal" description="Legal Pages for our Website" />
         <Navbar
           leftContent={<GoBackHomeButton />}
           rightContent={

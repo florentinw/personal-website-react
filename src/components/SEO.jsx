@@ -3,14 +3,17 @@ import { Helmet } from "react-helmet";
 
 class SEO extends Component {
   render() {
+    const defaultTitle = "Florentin | Freelance Graphic Designer";
     const description =
       this.props.description ||
       "I'm Florentin, a designer based in a small town in Germany. I love designing logos, developing websites and creating posters.";
     const cover = this.props.cover || require("../assets/imgs/meta/card.jpg");
-    const title = this.props.title;
+    const title = this.props.title || defaultTitle;
 
     return (
       <Helmet
+        defaultTitle={defaultTitle}
+        titleTemplate="%s | Florentin"
         title={this.props.title}
         meta={[
           {
@@ -30,16 +33,20 @@ class SEO extends Component {
             content: cover
           },
           {
-            name: "og:image:secure_url",
-            content: cover
-          },
-          {
             name: "og:image",
             content: cover
           },
           {
+            name: "og:width",
+            content: "1200px"
+          },
+          {
+            name: "og:height",
+            content: "660px"
+          },
+          {
             name: "og:url",
-            content: "https://florentin.design"
+            content: window.location.href
           },
           {
             name: "og:type",

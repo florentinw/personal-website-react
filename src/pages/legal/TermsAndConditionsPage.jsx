@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import { Helmet } from "react-helmet";
+import SEO from "../../components/SEO";
 
 import Header from "../../components/Header";
 import Subtitle from "../../components/Subtitle";
@@ -10,7 +10,7 @@ class TermsAndConditionsPage extends Component {
   render() {
     return (
       <Fragment>
-        <Helmet title="Terms &amp; Conditions" />
+        <SEO title="Terms &amp; Conditions" />
         <Header content="Terms &amp; Conditions" />
         <Container>
           <Subtitle>General</Subtitle>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 
 import HowToMusicProject from "../projects/HowToMusicProject";
 import ShortTechProject from "../projects/ShortTechProject";
@@ -15,7 +15,7 @@ export default {
     summary:
       'In the funk-produced YouTube series "How to Music", the audience accompanies six up-and-coming musicians who are breaking new ground in the music industry.',
     introduction: (
-      <div>
+      <Fragment>
         <BodyText>
           How do you start a music career? How to Music accompany six young up-and-coming musicians on their hard way into the music
           industry. In addition to talent, songwriters must have many skills and work hard to be successful in the music industry in the
@@ -27,7 +27,7 @@ export default {
           them closer to their big dream of a record deal.
         </BodyText>
         <BodyText>The next tough challenge is never far away!</BodyText>
-      </div>
+      </Fragment>
     ),
     background: {
       type: "img",
@@ -43,7 +43,7 @@ export default {
     skills: "Web Design & Branding",
     summary: "ShortTech truly simplifies the way young generations consume  consumer electronic media.",
     introduction: (
-      <div>
+      <Fragment>
         <BodyText>
           ShortTech is a non-profit tech project built by a small team of young teenagers who love to engage with consumer electronics &amp;
           tech gadgets.
@@ -52,13 +52,12 @@ export default {
           Since mid 2017 they report on the newest innovations in the tech &amp; media world live on Twitter and on their blog. No matter if
           during weekdays or the weekends: ShortTech is always well informed about all topics and provides up-to-date news directly for you.
         </BodyText>
-      </div>
+      </Fragment>
     ),
     background: {
       type: "gradient",
       from: "#7447BA",
-      to: "#1DA6CB",
-      introImage: require("../assets/imgs/portfolio/shorttech/business-cards.jpg")
+      to: "#1DA6CB"
     },
     addonImage: require("../assets/imgs/portfolio/shorttech/cover/addon.jpg"),
     component: <ShortTechProject />
@@ -68,23 +67,25 @@ export default {
     client: "Blümel & Liebschwager GbR",
     headline: "Moving traditional companies into the digital age",
     skills: "Web Design & Development",
-    summary:
-      'In the funk-produced YouTube series "How to Music", the audience accompanies six up-and-coming musicians who are breaking new ground in the music industry.',
+    summary: "Optik Blümel & Liebschwager combines great tradition and personal advice at expert level with modern, trendy looks.",
     introduction: (
-      <div>
+      <Fragment>
         <BodyText>
-          In the funk-produced YouTube series "How to Music", the audience accompanies six up-and-coming musicians who are breaking new
-          ground in the music industry.
+          Since 1977 the shop "Augenoptik Uhren Schmuck" (Optics, Watches &amp; Jewelry) exists at the Bahnhofstrasse 19. Their small team
+          attaches great importance to individual consultation, quality and timeless design. Personal connections and customer satisfaction
+          guarantee are also a key element to their business.
         </BodyText>
         <BodyText>
-          How to Music coaches and supports the musicians with tips, tricks and workshops to bring them closer to their big dream of a
-          record deal!
+          They feature a large selection of trendy spectacle frames in your visual acuity, color and personal style. No matter if for far,
+          near or progressive vision, all sports or work - you are optimally equipped with Optik Blümel &amp; Liebschwager.
         </BodyText>
-      </div>
+      </Fragment>
     ),
     background: {
       type: "img",
-      src: require("../assets/imgs/portfolio/optikbluemel/cover/background.jpg")
+      src: require("../assets/imgs/portfolio/optikbluemel/cover/background.jpg"),
+      to: "#3a3c42",
+      from: "#222427"
     },
     addonImage: require("../assets/imgs/portfolio/optikbluemel/cover/addon.jpg"),
     component: <OptikBluemelProject />

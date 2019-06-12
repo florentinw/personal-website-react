@@ -12,6 +12,64 @@ class HowToMusicProject extends Component {
     return (
       <Fragment>
         <Section>
+          <ImageWithContainer src={require("../assets/imgs/portfolio/howtomusic/real1.jpg")} />
+          <SectionText label="The Campaign" title="All throughout Berlin">
+            <BodyText>
+              In order to initially promote the show, a poster campaign was initiated. The posters were hung up all over Berlin, where the
+              show also takes place.
+            </BodyText>
+            <BodyText>
+              I was commissioned to design individual posters featuring all protagonists based on images provided by a photo-shooting
+              earlier.
+            </BodyText>
+          </SectionText>
+          <Gallery
+            images={[
+              require("../assets/imgs/portfolio/howtomusic/poster1.jpg"),
+              require("../assets/imgs/portfolio/howtomusic/poster2.jpg"),
+              require("../assets/imgs/portfolio/howtomusic/poster3.jpg")
+            ]}
+          />
+          <Gallery
+            images={[
+              require("../assets/imgs/portfolio/howtomusic/poster4.jpg"),
+              require("../assets/imgs/portfolio/howtomusic/poster5.jpg"),
+              require("../assets/imgs/portfolio/howtomusic/poster6.jpg")
+            ]}
+          />
+        </Section>
+        <Section>
+          <Gallery
+            images={[require("../assets/imgs/portfolio/howtomusic/real2.jpg"), require("../assets/imgs/portfolio/howtomusic/real3.jpg")]}
+          />
+        </Section>
+        <Section>
+          <ImageWithContainer src={require("../assets/imgs/portfolio/howtomusic/header2.jpg")} />
+          <SectionText label="Channel Designs" title="Present on all channels">
+            <BodyText>
+              I designed the complete channel design from Banner, profile Picture and Thumbnail Template for all platforms. Working with
+              funk branding guidelines gives all channels of the content network "funk" a professional and unified look.
+            </BodyText>
+          </SectionText>
+          <ImageWithContainer src={require("../assets/imgs/portfolio/howtomusic/yt.jpg")} />
+          <Gallery
+            images={[require("../assets/imgs/portfolio/howtomusic/thumbnail.jpg"), require("../assets/imgs/portfolio/howtomusic/logo.jpg")]}
+          />
+        </Section>
+        <Section>
+          <ImageWithContainer src={require("../assets/imgs/portfolio/howtomusic/talents-overview.jpg")} />
+          <SectionText label="The Talent Channels" title="More content for fans">
+            <BodyText>
+              <BodyText>
+                On the individual channels of the main protagonists viewers have the chance to discover what's going on behind the scenes of
+                How to Music on the hard way to a music career and stay up to date with exciting blogs week after week.
+              </BodyText>
+              <BodyText>Besides designing the main channel look, I was also in charge of the individual channel designs.</BodyText>
+            </BodyText>
+          </SectionText>
+          <ImageWithContainer src={require("../assets/imgs/portfolio/howtomusic/talents-header.jpg")} />
+        </Section>
+        <Section>
           <ImageWithContainer src={require("../assets/imgs/portfolio/howtomusic/funk.jpg")} />
           <SectionText label="About funk" title="funk is content network">
             <BodyText>
@@ -28,45 +86,6 @@ class HowToMusicProject extends Component {
               funk publishes entertaining, informative, critical and hopefully captivating videos on over 70 different channels.
             </BodyText>
           </SectionText>
-        </Section>
-        <Section>
-          <ImageWithContainer src={require("../assets/imgs/portfolio/howtomusic/real1.jpg")} />
-          <SectionText label="The Campaign" title="Posters">
-            <BodyText>Text</BodyText>
-          </SectionText>
-          <Gallery
-            images={[
-              require("../assets/imgs/portfolio/howtomusic/poster1.jpg"),
-              require("../assets/imgs/portfolio/howtomusic/poster2.jpg"),
-              require("../assets/imgs/portfolio/howtomusic/poster3.jpg")
-            ]}
-          />
-        </Section>
-        <Section>
-          <ImageWithContainer src={require("../assets/imgs/portfolio/howtomusic/header2.jpg")} />
-          <SectionText label="Channel Designs" title="Professionalism on point">
-            <BodyText>
-              I designed the complete channel design from Banner, profile Picture and Thumbnail Template for all platforms. Working with
-              funk branding guidelines gives all channels of the content network "funk" a professional and unified look.
-            </BodyText>
-          </SectionText>
-          <ImageWithContainer src={require("../assets/imgs/portfolio/howtomusic/yt.jpg")} />
-          <Gallery
-            images={[require("../assets/imgs/portfolio/howtomusic/thumbnail.jpg"), require("../assets/imgs/portfolio/howtomusic/logo.jpg")]}
-          />
-        </Section>
-        <Section>
-          <ImageWithContainer src={require("../assets/imgs/portfolio/howtomusic/talents-overview.jpg")} />
-          <SectionText label="The Talent Channels" title="More content">
-            <BodyText>
-              <BodyText>
-                On the individual channels of the main protagonists viewers have the chance to discover what's going on behind the scenes of
-                How to Music on the hard way to a music career and stay up to date with exciting blogs week after week.
-              </BodyText>
-              <BodyText>Besides designing the main channel look, I was also in charge of the individual channel designs.</BodyText>
-            </BodyText>
-          </SectionText>
-          <ImageWithContainer src={require("../assets/imgs/portfolio/howtomusic/talents-header.jpg")} />
         </Section>
       </Fragment>
     );

@@ -8,7 +8,7 @@ import Section from "../components/Section";
 import ImageWithContainer from "../components/ImageWithContainer";
 import Gallery from "../components/Gallery";
 
-class HowToMusicProject extends Component {
+class ShortTechProject extends Component {
   render() {
     return (
       <Fragment>
@@ -53,6 +53,17 @@ class HowToMusicProject extends Component {
           <ImageWithContainer src={require("../assets/imgs/portfolio/shorttech/home.jpg")} />
         </Section>
         <Section>
+          <Gallery
+            images={[require("../assets/imgs/portfolio/shorttech/stickers.jpg"), require("../assets/imgs/portfolio/shorttech/tshirt.jpg")]}
+          />
+          <SectionText label="Materials for events" title="Being present">
+            <BodyText>
+              ShortTech also markets their self outside the online word. Being present on events gives them the opportunity to meet their
+              fans and engage with the fast-growing community. Of course stickers &amp; merchandising play a major role.
+            </BodyText>
+          </SectionText>
+        </Section>
+        <Section>
           <ImageWithContainer src={require("../assets/imgs/portfolio/shorttech/alexa.jpg")} />
           <SectionText label="Alexa Flash Briefing Skill" title="Alexa, tell me the news">
             <BodyText>
@@ -64,20 +75,9 @@ class HowToMusicProject extends Component {
             </BodyText>
           </SectionText>
         </Section>
-        <Section>
-          <Gallery
-            images={[require("../assets/imgs/portfolio/shorttech/stickers.jpg"), require("../assets/imgs/portfolio/shorttech/tshirt.jpg")]}
-          />
-          <SectionText label="Materials for events" title="Being present">
-            <BodyText>
-              ShortTech also markets their self outside the online word. Being present on events gives them the opportunity to meet their
-              fans and engage with the fast-growing community. Of course stickers &amp; merchandising play a major role.
-            </BodyText>
-          </SectionText>
-        </Section>
       </Fragment>
     );
   }
 }
 
-export default HowToMusicProject;
+export default ShortTechProject;

@@ -17,7 +17,6 @@ class HowToMusicProject extends Component {
           >
             <Image src={require("../assets/imgs/portfolio/optikbluemel/iphone.jpg")} />
           </SectionText>
-
           <ImageWithContainer src={require("../assets/imgs/portfolio/optikbluemel/screenshot.jpg")} />
         </Section>
       </Fragment>

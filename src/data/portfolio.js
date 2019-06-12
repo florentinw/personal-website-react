@@ -60,6 +60,7 @@ export default {
       to: "#1DA6CB"
     },
     addonImage: require("../assets/imgs/portfolio/shorttech/cover/addon.jpg"),
+    seoImage: require("../assets/imgs/portfolio/shorttech/card.jpg"),
     component: <ShortTechProject />
   },
   optikbluemel: {

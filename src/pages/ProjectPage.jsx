@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
-import { Helmet } from "react-helmet";
 
+import SEO from "../components/SEO";
 import Header from "../components/Header";
 import GoBackHomeButton from "../components/GoBackHomeButton";
 import Navbar from "../components/Navbar";
@@ -13,7 +13,7 @@ class ProjectPage extends Component {
     const currentProject = portfolioData[this.props.match.params.slug];
     return (
       <Fragment>
-        <Helmet title={currentProject.name} />
+        <SEO title={currentProject.name} cover={currentProject.seoImage} />
         <Navbar leftContent={<GoBackHomeButton />} />
         <Header content={currentProject.summary} />
         <PortfolioItemIntroduction client={currentProject.client} skills={currentProject.skills}>

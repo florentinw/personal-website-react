@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
-import { Helmet } from "react-helmet";
 
+import SEO from "../components/SEO";
 import Header from "../components/Header";
 import SectionText from "../components/SectionText";
 import BodyText from "../components/BodyText";
@@ -13,7 +13,7 @@ class AboutPage extends Component {
   render() {
     return (
       <Fragment>
-        <Helmet title="About me" />
+        <SEO title="About me" />
         <Navbar leftContent={<GoBackHomeButton>Back to my works</GoBackHomeButton>} />
         <Header
           content={`Hi there!\nI'm Florentin, a young digital product designer from Germany focused on creating digital products for humans.\n\nWith a focus on user interface, web and print design, I strive to create usable and polished products through passionate and deliberate design.`}

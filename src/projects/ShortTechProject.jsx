@@ -13,18 +13,27 @@ class ShortTechProject extends Component {
     return (
       <Fragment>
         <Section>
-          <ImageWithContainer src={require("../assets/imgs/portfolio/shorttech/business-cards.jpg")} />
+          <ImageWithContainer
+            src={require("../assets/imgs/portfolio/shorttech/business-cards.jpg")}
+            tinySrc={require("../assets/imgs/portfolio/shorttech/business-cards-tiny.jpg")}
+          />
           <SectionText
             label="The Logo"
             title="s + t is short for ShortTech"
             text="The simple, yet clear letter mark endows the young brand with an unique look and high recognition value. It works for all form
             factors from small to big."
           >
-            <Image src={require("../assets/imgs/portfolio/shorttech/logo-showcase.jpg")} />
+            <Image
+              src={require("../assets/imgs/portfolio/shorttech/logo-showcase.jpg")}
+              tinySrc={require("../assets/imgs/portfolio/shorttech/logo-showcase-tiny.jpg")}
+            />
           </SectionText>
         </Section>
         <Section>
-          <ImageWithContainer src={require("../assets/imgs/portfolio/shorttech/twitter-app.jpg")} />
+          <ImageWithContainer
+            src={require("../assets/imgs/portfolio/shorttech/twitter-app.jpg")}
+            tinySrc={require("../assets/imgs/portfolio/shorttech/twitter-app-tiny.jpg")}
+          />
           <SectionText label="Why Twitter" title="Go where your community lives">
             <BodyText>
               Twitter connects 100 million daily-active users with over tweets sent each day. 37% of all these users are between the ages of

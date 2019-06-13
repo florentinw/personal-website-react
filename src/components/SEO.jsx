@@ -21,52 +21,32 @@ class SEO extends Component {
             content: description
           },
           {
-            name: "twitter:description",
-            content: description
-          },
-          {
-            name: "og:description",
-            content: description
-          },
-          {
-            name: "twitter:image",
-            content: cover
-          },
-          {
-            name: "og:image",
-            content: cover
-          },
-          {
-            name: "og:width",
-            content: "1200px"
-          },
-          {
-            name: "og:height",
-            content: "660px"
-          },
-          {
-            name: "og:url",
+            property: "og:url",
             content: window.location.href
           },
           {
-            name: "og:type",
+            property: "og:type",
             content: "website"
           },
           {
-            name: "og:locale",
+            property: "og:locale",
             content: "en_US"
           },
           {
-            name: "og:site_name",
+            property: "og:site_name",
             content: "florentin.design"
           },
           {
-            name: "og:title",
+            property: "og:title",
             content: title
           },
           {
-            name: "twitter:card",
-            content: "summary_large_image"
+            property: "og:description",
+            content: description
+          },
+          {
+            property: "og:image",
+            content: cover
           },
           {
             name: "twitter:site",
@@ -79,6 +59,18 @@ class SEO extends Component {
           {
             name: "twitter:title",
             content: title
+          },
+          {
+            name: "twitter:description",
+            content: description
+          },
+          {
+            name: "twitter:image",
+            content: cover
+          },
+          {
+            name: "twitter:card",
+            content: "summary_large_image"
           }
         ]}
       />

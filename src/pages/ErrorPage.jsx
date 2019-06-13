@@ -9,9 +9,9 @@ class ErrorPage extends Component {
   render() {
     return (
       <Fragment>
-        <SEO title="Error" description="An error has occurred" />
-        <Navbar leftContent={<GoBackButton>Back to home</GoBackButton>} />
-        <Header content="Error" />
+        <SEO title="Looks like you're lost.." description="Sorry, but the page you are looking for does not exist." />
+        <Navbar leftContent={<GoBackButton />} />
+        <Header content={`Looks like you're lost..\n Sorry, but the page you are looking for does not exist.`} />
       </Fragment>
     );
   }

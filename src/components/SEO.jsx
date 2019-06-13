@@ -6,7 +6,7 @@ class SEO extends Component {
     const defaultTitle = "Florentin | Freelance Graphic Designer";
     const description =
       this.props.description ||
-      "I'm Florentin, a designer based in a small town in Germany. I love designing logos, developing websites and creating posters.";
+      "Self-taught, 16-year-old digital product designer and dark chocolate enthusiast focused on creating experiences & beautiful products.";
     const cover = this.props.cover || require("../assets/imgs/meta/card.jpg");
     const title = this.props.title || defaultTitle;
 

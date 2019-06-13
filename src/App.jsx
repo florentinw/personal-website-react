@@ -32,7 +32,7 @@ class App extends Component {
 
     this.matomoInstance = new ReactPiwik({
       url: "analytics.florentinwalter.de",
-      siteId: 3
+      siteId: 6
     });
   }
 

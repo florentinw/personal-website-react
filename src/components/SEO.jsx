@@ -22,10 +22,6 @@ class SEO extends Component {
             href: require("../assets/imgs/meta/apple-touch-icon.png")
           },
           {
-            rel: "manifest",
-            href: require("../assets/imgs/meta/manifest.json")
-          },
-          {
             rel: "mask-icon",
             href: require("../assets/imgs/meta/safari-pinned-tab.svg"),
             color: "#222222"

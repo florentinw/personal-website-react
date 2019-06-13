@@ -7,7 +7,7 @@ class SEO extends Component {
     const description =
       this.props.description ||
       "Self-taught, 16-year-old digital product designer and dark chocolate enthusiast focused on creating experiences & beautiful products.";
-    const cover = window.location.orgin + this.props.cover || window.location.orgin + require("../assets/imgs/meta/card.jpg");
+    const cover = "https://florentin.design" + this.props.cover || "https://florentin.design" + require("../assets/imgs/meta/card.jpg");
     const title = this.props.title || defaultTitle;
 
     return (

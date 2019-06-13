@@ -1,7 +1,7 @@
 {
   "version": 2,
   "name": "personal-website",
-  "alias": "florentin.design",
+  "alias": ["florentin.design"],
   "builds": [{ "src": "package.json", "use": "@now/static-build" }],
   "regions": ["bru"],
   "routes": [

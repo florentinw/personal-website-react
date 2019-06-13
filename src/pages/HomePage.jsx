@@ -8,6 +8,8 @@ import PortfolioLayout from "../components/PortfolioLayout";
 import SocialMediaFooter from "../components/SocialMediaFooter";
 import SEO from "../components/SEO";
 
+import { calcAge } from "../function/util.js";
+
 class HomePage extends Component {
   render() {
     return (
@@ -15,7 +17,9 @@ class HomePage extends Component {
         <SEO cover={require("../assets/imgs/meta/card-preview.jpg")} />
         <Navbar leftContent={<Logo />} rightContent={<CustomLink to="/about">about</CustomLink>} />
         <Header
-          content={`Self-taught, 16-year-old digital product designer and dark chocolate enthusiast focused on creating experiences & beautiful products.`}
+          content={`Self-taught, ${calcAge(
+            "2002/06/17"
+          )}-year-old digital product designer and dark chocolate enthusiast focused on creating experiences & beautiful products.`}
         />
         <PortfolioLayout />
         <SocialMediaFooter />

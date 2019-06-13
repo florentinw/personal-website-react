@@ -1,12 +1,16 @@
 import React, { Component } from "react";
 import { Helmet } from "react-helmet";
 
+import { calcAge } from "../function/util.js";
+
 class SEO extends Component {
   render() {
     const defaultTitle = "Florentin | Freelance Graphic Designer";
     const description =
       this.props.description ||
-      "Self-taught, 16-year-old digital product designer and dark chocolate enthusiast focused on creating experiences & beautiful products.";
+      `Self-taught, ${calcAge(
+        "2002/06/17"
+      )}-year-old digital product designer and dark chocolate enthusiast focused on creating experiences & beautiful products.`;
     const cover = "https://florentin.design" + this.props.cover || "https://florentin.design" + require("../assets/imgs/meta/card.jpg");
     const title = this.props.title || defaultTitle;
 

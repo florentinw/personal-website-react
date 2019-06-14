@@ -30,12 +30,12 @@ class AboutPage extends Component {
           <BodyText>
             With the creation of my design-related YouTube channel at the age of 13 and two years of continuous uploads, I found my way into
             the video game graphic design community. I also moved away from <CustomLink to="https://microsoft.com">PowerPoint</CustomLink>{" "}
-            into the Photoshop World. Through my growing social media presence, I initially got my first few jobs mostly doing work for
+            into the Photoshop world. Through my growing social media presence, I initially got my first few jobs mostly doing work for
             individuals in the social media world.
           </BodyText>
           <BodyText>
-            Since then I’ve been expanding my skill set, began developing my knowledge, teaching myself how to code and eventually started
-            my own business one year ago. It was at that time when I truly understood the value I was providing.
+            Since then I’ve been expanding my skillset, began developing my knowledge, taught myself how to code and eventually started my
+            own adventure. It was at that time I truly understood the value I'm able to provide.
           </BodyText>
         </SectionText>
         <SectionText label="Now" title="Fast forward">
@@ -43,10 +43,10 @@ class AboutPage extends Component {
             Fast forward a few years and I'm now working as a freelance user experience and interface designer with various clients from the
             highly diverse economic sectors and I have started my own business to pursue the dream.
           </BodyText>
-          <BodyText>
+          {/*<BodyText>
             Whilst being entirely self-taught, I have been previously working with great agencies like Wilkom or Berlin-based dopestudi0s
             which allows me to work with great brands and companies.
-          </BodyText>
+          </BodyText>*/}
           <BodyText>
             When I am not pushing pixels, and besides being a student, you may find me trying out the hottest new design tools, shooting
             some sick photographs on Instagram – or oftentimes just snacking some delicious chocolate.

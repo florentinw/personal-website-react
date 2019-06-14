@@ -22,7 +22,7 @@ class HowToMusicProject extends Component {
               show also takes place.
             </BodyText>
             <BodyText>
-              I was commissioned to design individual posters featuring all protagonists based on images provided by a photo-shooting
+              I was commissioned to design the individual posters featuring all protagonists based on images provided by a photo-shooting
               earlier.
             </BodyText>
           </SectionText>
@@ -71,8 +71,8 @@ class HowToMusicProject extends Component {
           />
           <SectionText label="Channel Designs" title="Present on all channels">
             <BodyText>
-              I designed the complete channel design from Banner, profile Picture and Thumbnail Template for all platforms. Working with
-              funk branding guidelines gives all channels of the content network "funk" a professional and unified look.
+              I designed the complete channel design from banner &amp; profile picture to thumbnail template for all platforms. Working with
+              funk branding guidelines gives all channels of the content network a professional and unified look.
             </BodyText>
           </SectionText>
           <ImageWithContainer
@@ -99,10 +99,10 @@ class HowToMusicProject extends Component {
           />
           <SectionText label="The Talent Channels" title="More content for fans">
             <BodyText>
-              On the individual channels of the main protagonists viewers have the chance to discover what's going on behind the scenes of
-              How to Music on the hard way to a music career and stay up to date with exciting blogs week after week.
+              On the individual protagonist's channels viewers have the chance to discover what's going on behind the scenes of How to Music
+              and stay up to date with exciting vlogs week after week.
             </BodyText>
-            <BodyText>Besides designing the main channel look, I was also in charge of the individual channel designs.</BodyText>
+            <BodyText>Besides designing the main channel's look, I was also in charge of the individual channel designs.</BodyText>
           </SectionText>
           <ImageWithContainer
             src={require("../assets/imgs/portfolio/howtomusic/talents-header.jpg")}
@@ -121,7 +121,7 @@ class HowToMusicProject extends Component {
               Facebook, Instagram, Snapchat and TikTok as well as on their own web app <Link to="http://funk.net/">funk.net</Link>.
             </BodyText>
             <BodyText>
-              The content network originally launched in October 2016 is a public service and is therefore financed by the radio
+              The content network, originally launched in October 2016, is a public service and is therefore financed by the radio
               contribution, which enables the creators to create content that is free of advertising and independent of financial and
               political influences.
             </BodyText>

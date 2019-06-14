@@ -17,14 +17,14 @@ export default {
     introduction: (
       <Fragment>
         <BodyText>
-          How do you start a music career? How to Music accompany six young up-and-coming musicians on their hard way into the music
-          industry. In addition to talent, songwriters must have many skills and work hard to be successful in the music industry in the
-          long term.
+          How do you start a music career? How to Music accompanies six young up-and-coming musicians on their hard way into the music
+          industry. In addition to talent, songwriters need many skills and work hard to be successful in the music industry for the long
+          term.
         </BodyText>
         <BodyText>
-          With hard training, practice and the most important tips and tricks for appearances, personality, performance, studio recordings
-          and challenging challenges, the young artists learn week after week new skills to further advance their music careers bringing
-          them closer to their big dream of a record deal.
+          With hard training, practice and the tips and tricks for appearances, personality, performance, studio recordings and provoking
+          challenges, the young artists learn new skills week after week to further advance their music careers bringing them closer to
+          their big dream of a record deal.
         </BodyText>
         <BodyText>The next tough challenge is never far away!</BodyText>
       </Fragment>
@@ -74,12 +74,12 @@ export default {
       <Fragment>
         <BodyText>
           Since 1977 the shop "Augenoptik Uhren Schmuck" (Optics, Watches &amp; Jewelry) exists at the Bahnhofstrasse 19. Their small team
-          attaches great importance to individual consultation, quality and timeless design. Personal connections and customer satisfaction
-          guarantee are also a key element to their business.
+          attaches great importance to individual consulting, quality and timeless design. Personal connections and customer satisfaction
+          are also keys element to their business.
         </BodyText>
         <BodyText>
           They feature a large selection of trendy spectacle frames in your visual acuity, color and personal style. No matter if for far,
-          near or progressive vision, all sports or work - you are optimally equipped with Optik Blümel &amp; Liebschwager.
+          near or progressive vision, for all sports or work - you are optimally equipped with Optik Blümel &amp; Liebschwager.
         </BodyText>
       </Fragment>
     ),

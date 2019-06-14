@@ -16,7 +16,7 @@ class HowToMusicProject extends Component {
           <SectionText
             label="The Website"
             title="Modern, simple &amp; clear"
-            text="They reached out to impart a professional and modern look to their dated website. For an independent content editing experience I utilized WordPress together with a custom theme."
+            text="They reached out to impart a professional and modern look into their dated website. For an independent content editing experience I utilized WordPress together with a custom theme."
           >
             <Image
               src={require("../assets/imgs/portfolio/optikbluemel/iphone.jpg")}

@@ -16,20 +16,22 @@ const Wrapper = styled(Container)`
 const Item = styled.div`
   flex: 1 0 300px;
   margin: 12px 12px;
-  position: relative;
-  ${p =>
-    p.squared
-      ? `&:before {
+  > div {
+    position: relative;
+    ${p =>
+      p.squared
+        ? `&:before {
     content: "";
     float: left;
     padding-top: 100%;
   }`
-      : void 0}
-  img {
-    position: ${p => (p.squared ? "absolute;" : "relative")};
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+        : void 0}
+    >img {
+      position: ${p => (p.squared ? "absolute;" : "relative")};
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 `;
 class Gallery extends Component {

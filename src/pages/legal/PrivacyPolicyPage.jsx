@@ -15,7 +15,7 @@ class PrivacyPolicyPage extends Component {
     return (
       <Fragment>
         <SEO title="Privacy Policy" />
-        <Header content="In general, our website can be used without providing any personal data. If personal data (such as name, postal or email addresses) are collected, this will occur on a voluntary basis, in so far as possible." />
+        <Header content="In general, our website can be used without providing any personal data. If personal data (such as name, postal or email addresses) are collected, this will occur on a voluntary basis" />
         <Container>
           <Subtitle>General</Subtitle>
           <BodyText>
@@ -67,13 +67,13 @@ class PrivacyPolicyPage extends Component {
           </BodyText>
           <Subtitle> Customer and contract data</Subtitle>
           <BodyText>
-            We collect, process and use personal data only insofar as this is necessary for the performance of a contract or precontractual
+            We collect, process and use personal data insofar as this is necessary for the performance of a contract or precontractual
             measures (in accordance with Article 6 (1) (b) GDPR).
           </BodyText>
           <BodyText>
             We only transfer personal data to third parties if this is necessary within the scope of the contract, for example to the bank
-            responsible for processing the payment. A further transmission of the data does not take place or only if you have expressly
-            consented to the transmission. A transfer of your data to third parties without explicit consent, such as for advertising
+            responsible for processing the payment. A further transmission of the data does not take place or only if you have expressed
+            consent to the transmission. A transfer of your data to third parties without explicit consent, such as for advertising
             purposes, does not occur.
           </BodyText>
           <Subtitle>External links and social media</Subtitle>

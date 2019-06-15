@@ -88,7 +88,7 @@ class ShortTechProject extends Component {
           />
           <SectionText label="Materials for events" title="Being present">
             <BodyText>
-              ShortTech also markets theirself outside the online word. Being present on events gives them the opportunity to meet their
+              ShortTech also markets themself outside the online world. Being present on events gives them the opportunity to meet their
               fans and engage with the fast-growing community. Of course stickers &amp; merchandising play a major role.
             </BodyText>
           </SectionText>

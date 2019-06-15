@@ -15,7 +15,7 @@ class AboutPage extends Component {
       <Fragment>
         <SEO
           title="About me"
-          description="Hi there! I'm Florentin, a young digital product designer from Germany focused on creating digital products for humans."
+          description="Hi there! I'm Florentin, a young digital product designer from Germany, focused on creating digital products for humans."
           cover={require("../assets/imgs/about/card.jpg")}
         />
         <Navbar leftContent={<GoBackHomeButton>Back to my works</GoBackHomeButton>} />

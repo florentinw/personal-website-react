@@ -10,7 +10,7 @@ class SEO extends Component {
       this.props.description ||
       `Self-taught, ${calcAge(
         "2002/06/17"
-      )}-year-old digital product designer and dark chocolate enthusiast focused on creating experiences & beautiful products.`;
+      )}-year-old digital product designer and dark chocolate enthusiast, focused on creating experiences & beautiful products.`;
     const cover = "https://florentin.design" + this.props.cover || "https://florentin.design" + require("../assets/imgs/meta/card.jpg");
     const title = this.props.title || defaultTitle;
 

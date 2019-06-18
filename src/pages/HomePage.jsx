@@ -19,7 +19,7 @@ class HomePage extends Component {
         <Header
           content={`Self-taught, ${calcAge(
             "2002/06/17"
-          )}-year-old digital product designer and dark chocolate enthusiast focused on creating experiences & beautiful products.`}
+          )}-year-old digital product designer and dark chocolate enthusiast, focused on creating experiences & beautiful products.`}
         />
         <PortfolioLayout />
         <SocialMediaFooter />

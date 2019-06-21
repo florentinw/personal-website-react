@@ -27,9 +27,7 @@ window.t = Translation.getPhrase;
 class App extends Component {
   constructor(props) {
     super(props);
-
-    window.prerenderReady = false;
-
+    console.log(window.prerenderReady);
     this.history = createBrowserHistory();
 
     this.matomoInstance = new ReactPiwik({
@@ -39,6 +37,19 @@ class App extends Component {
   }
 
   componentWillMount = () => {
+    const ready = fn => {
+      if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        fn();
+      } else {
+        document.addEventListener("DOMContentLoaded", fn);
+      }
+    };
+
+    ready(() => {
+      window.prerenderReady = true;
+      console.log(window.prerenderReady);
+    });
+
     if (window.prefersDarkmode) {
       this.setState({ theme: "dark" });
     } else if (localStorage.getItem("theme") === "dark") {

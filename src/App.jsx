@@ -28,6 +28,8 @@ class App extends Component {
   constructor(props) {
     super(props);
 
+    window.prerenderReady = false;
+
     this.history = createBrowserHistory();
 
     this.matomoInstance = new ReactPiwik({
@@ -37,7 +39,6 @@ class App extends Component {
   }
 
   componentWillMount = () => {
-    window.prerenderReady = false;
     if (window.prefersDarkmode) {
       this.setState({ theme: "dark" });
     } else if (localStorage.getItem("theme") === "dark") {

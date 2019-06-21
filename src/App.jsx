@@ -37,7 +37,6 @@ class App extends Component {
   }
 
   componentWillMount = () => {
-    window.prerenderReady = false;
     if (window.prefersDarkmode) {
       this.setState({ theme: "dark" });
     } else if (localStorage.getItem("theme") === "dark") {

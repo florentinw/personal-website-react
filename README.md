@@ -1,4 +1,4 @@
-[![kickup-react](banner.jpg)](#)
+[![kickup-react](banner.jpg)](#) [![Greenkeeper badge](https://badges.greenkeeper.io/florentinw/personal-website.svg)](https://greenkeeper.io/)
 
 ---
 

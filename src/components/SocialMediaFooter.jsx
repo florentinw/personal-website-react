@@ -23,8 +23,13 @@ class SocialMediaFooter extends Component {
             Twitter
           </CustomLink>{" "}
           or shoot me an{" "}
-          <CustomLink color="#ffcd65" to="mailto:hello@florentin.design?Subject=Hello">
+          <CustomLink color="#ffcd65" to="mailto:hello@florentin.design?Subject=👋">
             Email
+          </CustomLink>
+          .
+          Let's do some business on{" "}
+          <CustomLink color="#2867b2" to="https://linkedin.com/in/florentinw/">
+            Linkedin
           </CustomLink>
           .
         </Subtitle>

@@ -15,11 +15,14 @@ class HomePage extends Component {
     return (
       <Fragment>
         <SEO cover={require("../assets/imgs/meta/card-preview.jpg")} />
-        <Navbar leftContent={<Logo />} rightContent={<CustomLink to="/about">about</CustomLink>} />
+        <Navbar
+          leftContent={<Logo />}
+          rightContent={<CustomLink to="/about">about</CustomLink>}
+        />
         <Header
-          content={`Self-taught, ${calcAge(
+          content={`${calcAge(
             "2002/06/17"
-          )}-year-old digital product designer and dark chocolate enthusiast, focused on creating experiences & beautiful products.`}
+          )}-year-old digital product designer and dark chocolate enthusiast, focused on creating experiences & beautiful products`}
         />
         <PortfolioLayout />
         <SocialMediaFooter />

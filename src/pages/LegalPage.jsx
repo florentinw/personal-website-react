@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import { Route, Switch } from "react-router";
+import { Route, Routes } from "react-router";
 import SEO from "../components/SEO";
 
 import Navbar from "../components/Navbar";
@@ -21,19 +21,37 @@ class LegalPage extends Component {
           rightContent={
             <nav>
               <ul>
-                <InlineNavItem to={this.props.match.path}>Legal Disclosure</InlineNavItem>
-                <InlineNavItem to={`${this.props.match.path}/privacypolicy`}>Privacy Policy</InlineNavItem>
-                <InlineNavItem to={`${this.props.match.path}/termsandconditions`}>Terms &amp; Conditions</InlineNavItem>
+                <InlineNavItem to={this.props.match.path}>
+                  Legal Disclosure
+                </InlineNavItem>
+                <InlineNavItem to={`${this.props.match.path}/privacypolicy`}>
+                  Privacy Policy
+                </InlineNavItem>
+                <InlineNavItem
+                  to={`${this.props.match.path}/termsandconditions`}
+                >
+                  Terms &amp; Conditions
+                </InlineNavItem>
               </ul>
             </nav>
           }
         />
-        <Switch>
-          <Route exact path={this.props.match.path} component={LegalDisclosurePage} />
-          <Route path={`${this.props.match.path}/privacypolicy`} component={PrivacyPolicyPage} />
-          <Route path={`${this.props.match.path}/termsandconditions`} component={TermsAndConditionsPage} />
+        <Routes>
+          <Route
+            exact
+            path={this.props.match.path}
+            component={LegalDisclosurePage}
+          />
+          <Route
+            path={`${this.props.match.path}/privacypolicy`}
+            component={PrivacyPolicyPage}
+          />
+          <Route
+            path={`${this.props.match.path}/termsandconditions`}
+            component={TermsAndConditionsPage}
+          />
           <Route component={ErrorPage} />
-        </Switch>
+        </Routes>
       </Fragment>
     );
   }

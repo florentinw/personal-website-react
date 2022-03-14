@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import { Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import ReactPiwik from "react-piwik";
 import { createBrowserHistory } from "history";
@@ -32,13 +32,17 @@ class App extends Component {
 
     this.matomoInstance = new ReactPiwik({
       url: "analytics.florentinwalter.de",
-      siteId: 6
+      siteId: 6,
     });
   }
 
   componentWillMount = () => {
-    const ready = fn => {
-      if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+    const ready = (fn) => {
+      if (
+        document.attachEvent
+          ? document.readyState === "complete"
+          : document.readyState !== "loading"
+      ) {
         fn();
       } else {
         document.addEventListener("DOMContentLoaded", fn);
@@ -79,7 +83,7 @@ class App extends Component {
         lowContrast: "#aaaaaa",
         mediumContrast: "#888888",
         highContrast: "#333333",
-        higherContrast: "#111111"
+        higherContrast: "#111111",
       },
       dark: {
         background: "#111111",
@@ -87,8 +91,8 @@ class App extends Component {
         lowContrast: "#888888",
         mediumContrast: "#aaaaaa",
         highContrast: "#E9E9E9",
-        higherContrast: "#FFFFFF"
-      }
+        higherContrast: "#FFFFFF",
+      },
     };
 
     let currentTheme = themes[this.state.theme];
@@ -96,24 +100,31 @@ class App extends Component {
 
     return (
       <ThemeProvider theme={currentTheme}>
-        <Router history={this.matomoInstance.connectToHistory(this.history)}>
+        <BrowserRouter>
           <Fragment>
             <SEO />
-            <Switch>
+            <Routes>
               <Route exact path="/" component={HomePage} />
               <Route exact path="/about" component={AboutPage} />
-              <Route path={`/project/:slug(${Object.keys(portfolioData).join("|")})`} component={ProjectPage} />
+              <Route
+                path={`/project/:slug(${Object.keys(portfolioData).join("|")})`}
+                component={ProjectPage}
+              />
               <Route path="/legal" component={LegalPage} />
               <Route component={ErrorPage} />
-            </Switch>
+            </Routes>
             <Footer
               style={{ marginBottom: "100px" }}
               leftContent={<SmallText>2015 - ∞</SmallText>}
-              centerContent={<Button onClick={() => this.handleSwitchThemeButton()}>Switch Theme</Button>}
+              centerContent={
+                <Button onClick={() => this.handleSwitchThemeButton()}>
+                  Switch Theme
+                </Button>
+              }
               rightContent={<CustomLink to="/legal">Legal</CustomLink>}
             />
           </Fragment>
-        </Router>
+        </BrowserRouter>
       </ThemeProvider>
     );
   };

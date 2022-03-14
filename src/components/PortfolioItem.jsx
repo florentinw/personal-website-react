@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import { Redirect } from "react-router";
 import Tilty from "react-tilty";
 
 import Label from "./Label";
@@ -31,7 +30,7 @@ const Wrapper = styled.article`
   margin: 24px 12px;
   cursor: pointer;
   position: relative;
-  background: ${p => {
+  background: ${(p) => {
     if (p.background.type === "img") {
       return `url("${p.background.src}") no-repeat center / cover`;
     } else if (p.background.type === "gradient") {
@@ -78,7 +77,8 @@ const Wrapper = styled.article`
     }
   }
   &.howtomusic {
-    background: ${p => `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url("${p.background.src}") no-repeat center / cover`};
+    background: ${(p) =>
+      `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url("${p.background.src}") no-repeat center / cover`};
   }
   &.shorttech {
     padding-bottom: 60%;
@@ -118,7 +118,7 @@ const Wrapper = styled.article`
 
 class PortfolioItem extends Component {
   state = {
-    redirect: false
+    redirect: false,
   };
 
   handleOnClick = () => {
@@ -127,7 +127,7 @@ class PortfolioItem extends Component {
 
   render = () => {
     if (this.state.redirect) {
-      return <Redirect push to={`project/${this.props.slug}`} />;
+      this.props.history.push(`project/${this.props.slug}`);
     }
 
     return (
@@ -135,7 +135,7 @@ class PortfolioItem extends Component {
         settings={{
           scale: 1.0175,
           max: 8,
-          speed: 1000
+          speed: 1000,
         }}
         style={{ transformStyle: "preserve-3d" }}
       >
@@ -147,7 +147,7 @@ class PortfolioItem extends Component {
               .toLowerCase()
               .replace(/\s/g, "")
               .replace(/\u00fc/g, "ue"),
-            `addon-postion-${this.props.addonPosition}`
+            `addon-postion-${this.props.addonPosition}`,
           ].join(" ")}
         >
           <Label>{this.props.name}</Label>
@@ -172,10 +172,10 @@ PortfolioItem.propTypes = {
     type: PropTypes.string.isRequired,
     from: PropTypes.string,
     to: PropTypes.string,
-    src: PropTypes.string
+    src: PropTypes.string,
   }),
   addonImage: PropTypes.string,
-  slug: PropTypes.string.isRequired
+  slug: PropTypes.string.isRequired,
 };
 
 export default PortfolioItem;
